@@ -117,4 +117,7 @@ Team Convention G.9
     }
     ~~~
 
-    สำหรับการ Indent ใช้การเว้น 4 Space
+12. สำหรับการ Indent ใช้การเว้น 4 Space
+13. มีการเขียน comment อธิบายในแต่ละ class และ method ว่ามีหลักการทำงานหลัก ๆ อย่างไร
+14. ต้อง Refactor code ทุกครั้งหลังทำเสร็จ
+
