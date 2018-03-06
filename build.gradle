@@ -27,7 +27,9 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-
+	compile("org.springframework.boot:spring-boot-starter-thymeleaf:1.5.2.RELEASE")
+	compile("net.sourceforge.nekohtml:nekohtml:1.9.22")
+	compile group: 'joda-time', name: 'joda-time', version: '2.9.9'
 	testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
 	testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 }
