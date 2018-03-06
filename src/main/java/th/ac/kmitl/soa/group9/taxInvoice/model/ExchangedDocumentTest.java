@@ -22,6 +22,7 @@ public class ExchangedDocumentTest {
     public void shouldGetAllInfo() {
         ExchangedDocument exchangedDocument = new ExchangedDocument();
         exchangedDocument.setId(this.id);
+        exchangedDocument.setName(this.name);
         exchangedDocument.setTypeCode(this.typeCode);
         exchangedDocument.setIssueDateTime(this.issueDateTime);
         exchangedDocument.setPurpose(this.purpose);
@@ -31,6 +32,7 @@ public class ExchangedDocumentTest {
         exchangedDocument.setIncludedNote(this.includedNote);
 
         assertEquals(this.id, exchangedDocument.getId());
+        assertEquals(this.name, exchangedDocument.getName());
         assertEquals(this.typeCode, exchangedDocument.getTypeCode());
         assertEquals(this.issueDateTime, exchangedDocument.getIssueDateTime());
         assertEquals(this.purpose, exchangedDocument.getPurpose());
