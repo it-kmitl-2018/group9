@@ -15,25 +15,4 @@ public class ExchangedDocumentTest {
     private Timestamp creationDateTime = new Timestamp(System.currentTimeMillis());
     private IncludedNote includedNote = new IncludedNote();
 
-//    @Test
-//    public void shouldGetAllInfo() {
-//        ExchangedDocument exchangedDocument = new ExchangedDocument();
-//        exchangedDocument.setId(this.id);
-//        exchangedDocument.setTypeCode(this.typeCode);
-//        exchangedDocument.setIssueDateTime(this.issueDateTime);
-//        exchangedDocument.setPurpose(this.purpose);
-//        exchangedDocument.setPurposeCode(this.purposeCode);
-//        exchangedDocument.setGlobalId(this.globalId);
-//        exchangedDocument.setCreationDateTime(this.creationDateTime);
-//        exchangedDocument.setIncludedNote(this.includedNote);
-//
-//        assertEquals(this.id, exchangedDocument.getId());
-//        assertEquals(this.typeCode, exchangedDocument.getTypeCode());
-//        assertEquals(this.issueDateTime, exchangedDocument.getIssueDateTime());
-//        assertEquals(this.purpose, exchangedDocument.getPurpose());
-//        assertEquals(this.purposeCode, exchangedDocument.getPurposeCode());
-//        assertEquals(this.globalId, exchangedDocument.getGlobalId());
-//        assertEquals(this.creationDateTime, exchangedDocument.getCreationDateTime());
-//        assertEquals(this.includedNote, exchangedDocument.getIncludedNote());
-//    }
 }
