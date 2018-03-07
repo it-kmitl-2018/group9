@@ -8,8 +8,6 @@ class PostalTradeAddressTest {
 
     private String postCode = "10330";
     private String buildingName = "";
-    private String addressLine1 = "";
-    private String addressLine2 = "";
     private String soi = "จุฬาซอย 10";
     private String village = "";
     private String moo = "";
@@ -25,8 +23,6 @@ class PostalTradeAddressTest {
         PostalTradeAddress postalTradeAddress = new PostalTradeAddress();
         postalTradeAddress.setPostCode(this.postCode);
         postalTradeAddress.setBuildingName(this.buildingName);
-        postalTradeAddress.setAddressLine1(this.addressLine1);
-        postalTradeAddress.setAddressLine2(this.addressLine2);
         postalTradeAddress.setSoi(this.soi);
         postalTradeAddress.setVillage(this.village);
         postalTradeAddress.setMoo(this.moo);
@@ -39,8 +35,6 @@ class PostalTradeAddressTest {
 
         assertEquals(this.postCode, postalTradeAddress.getPostCode());
         assertEquals(this.buildingName, postalTradeAddress.getBuildingName());
-        assertEquals(this.addressLine1, postalTradeAddress.getAddressLine1());
-        assertEquals(this.addressLine2, postalTradeAddress.getAddressLine2());
         assertEquals(this.soi, postalTradeAddress.getSoi());
         assertEquals(this.village, postalTradeAddress.getVillage());
         assertEquals(this.moo, postalTradeAddress.getMoo());
