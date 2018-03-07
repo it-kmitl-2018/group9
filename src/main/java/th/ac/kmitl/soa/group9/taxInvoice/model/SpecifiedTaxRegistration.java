@@ -1,6 +1,7 @@
 package th.ac.kmitl.soa.group9.taxInvoice.model;
 
 public class SpecifiedTaxRegistration {
+
     private String id;
 
     public String getId() {

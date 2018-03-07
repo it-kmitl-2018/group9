@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SpecifiedTaxRegistrationTest {
+
     private String id = "057552600909900000";
 
     @Test
