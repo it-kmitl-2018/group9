@@ -1,6 +1,6 @@
 package th.ac.kmitl.soa.group9.taxInvoice.model;
 
-public class SellerTradeParty {
+public class Seller {
 
     private String id;
     private String globalId;
