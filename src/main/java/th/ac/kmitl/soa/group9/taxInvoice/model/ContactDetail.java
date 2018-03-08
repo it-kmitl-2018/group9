@@ -1,6 +1,6 @@
 package th.ac.kmitl.soa.group9.taxInvoice.model;
 
-public class DefinedTradeContact {
+public class ContactDetail {
 
     private String personName;
     private String departmentName;
