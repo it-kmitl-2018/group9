@@ -1,6 +1,6 @@
 package th.ac.kmitl.soa.group9.taxInvoice.model;
 
-public class PostalTradeAddress {
+public class Address {
 
     private String postCode;
     private String buildingName;
