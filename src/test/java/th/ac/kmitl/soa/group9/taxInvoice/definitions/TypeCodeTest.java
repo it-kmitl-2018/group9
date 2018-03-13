@@ -1,7 +1,6 @@
-package th.ac.kmitl.soa.group9.definitions;
+package th.ac.kmitl.soa.group9.taxInvoice.definitions;
 
 import org.junit.jupiter.api.Test;
-import th.ac.kmitl.soa.group9.taxInvoice.definitions.TypeCode;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
