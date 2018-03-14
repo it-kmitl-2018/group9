@@ -7,6 +7,7 @@ public class Seller {
     private String name;
     private String taxRegistrationId;
     private ContactDetail contactDetail;
+    private Address address;
 
     public String getId() {
         return id;
@@ -46,5 +47,13 @@ public class Seller {
 
     public void setContactDetail(ContactDetail contactDetail) {
         this.contactDetail = contactDetail;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 }
