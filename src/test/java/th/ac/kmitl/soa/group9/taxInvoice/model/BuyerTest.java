@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BuyerTest {
 
-    private String id = "";
-    private String globalId = "";
+    private String id = "ABCDEFGHIJKLMNOPQRST123456789012345";
+    private String globalId = "ABCDEFGHIJKLMNOPQRST123456789012345";
     private String name = "บริษัท ร่วมสมยัธุรกรรมอิเล็กทรอนิกส์ จำกัด";
     private String taxRegistrationId = "057552600909900000";
     private ContactDetail contactDetail = new ContactDetail();
