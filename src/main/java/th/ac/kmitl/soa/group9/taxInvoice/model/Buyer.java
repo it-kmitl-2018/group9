@@ -5,7 +5,7 @@ public class Buyer {
     private String id;
     private String globalId;
     private String name;
-    private String taxRegistrationId;
+    private String taxNumber;
     private ContactDetail contactDetail;
     private Address address;
 
@@ -33,12 +33,12 @@ public class Buyer {
         this.name = name;
     }
 
-    public String getTaxRegistrationId() {
-        return taxRegistrationId;
+    public String getTaxNumber() {
+        return taxNumber;
     }
 
-    public void setTaxRegistrationId(String taxRegistrationId) {
-        this.taxRegistrationId = taxRegistrationId;
+    public void setTaxNumber(String taxNumber) {
+        this.taxNumber = taxNumber;
     }
 
     public ContactDetail getContactDetail() {
