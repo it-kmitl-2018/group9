@@ -6,18 +6,18 @@
 </head>
 <body>
 <h1>Example Invoice Preview</h1>
-<table border="1">
+<table border="1" th:object="${exchangedDocument}">
     <tr>
         <td>ID</td>
-        <td>RDTIV0575526000058001</td>
+        <td th:text="${exchangedDocument.id}">
     </tr>
     <tr>
         <td>Name</td>
-        <td>ใบกํากับภําษ</td>
+        <td th:text="${exchangedDocument.name}"/>
     </tr>
     <tr>
         <td>Type Code</td>
-        <td>388</td>
+        <td th:text="${exchangedDocument.typeCode}"/>
     </tr>
     <tr>
         <td>หมายเหตุ</td>

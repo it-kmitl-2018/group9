@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
     <title>home</title>
@@ -7,19 +8,19 @@
 <body>
 <h1>Home</h1>
 <h3>Tax Invoice</h3>
-<form method="post" action="/home/index">
+<form method="post" th:action="@{/home/index}" th:object="${exchangedDocument}">
     <div>
         <label>ID</label>
 
-        <input type="text">
+        <input type="text" th:field="*{id}">
     </div>
     <div>
         <label>Name</label>
-        <input type="text">
+        <input type="text" th:field="*{name}">
     </div>
     <div>
         <label>Type code</label>
-        <input type="text">
+        <input type="text" th:field="*{typeCode}">
     </div>
     <div>
         <label>Issue date time</label>
@@ -27,15 +28,15 @@
     </div>
     <div>
         <label>Purpose</label>
-        <input type="text">
+        <input type="text" th:field="*{purpose}">
     </div>
     <div>
         <label>Purpose code</label>
-        <input type="text">
+        <input type="text" th:field="*{purposeCode}">
     </div>
     <div>
         <label>Global id</label>
-        <input type="text">
+        <input type="text" th:field="*{globalId}">
     </div>
     <div>
         <label>Creation date time</label>
@@ -49,6 +50,9 @@
     <div>
         <label>Content</label>
         <input type="text">
+    </div>
+    <div>
+        <input type="submit" value="Create" name="create"/>
     </div>
 </form>
 
