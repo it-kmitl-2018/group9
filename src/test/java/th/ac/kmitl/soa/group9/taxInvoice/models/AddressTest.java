@@ -1,4 +1,4 @@
-package th.ac.kmitl.soa.group9.taxInvoice.model;
+package th.ac.kmitl.soa.group9.taxInvoice.models;
 
 import org.junit.jupiter.api.Test;
 import th.ac.kmitl.soa.group9.taxInvoice.models.Address;
