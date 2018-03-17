@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8"/>
     <title>home</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 </head>
 <body>
 <h1>Home</h1>
+<h3>Tax Invoice</h3>
 <form method="post" action="/home/index">
     <div>
         <label>ID</label>
@@ -38,6 +39,15 @@
     </div>
     <div>
         <label>Creation date time</label>
+        <input type="text">
+    </div>
+    <h3>Included Note</h3>
+    <div>
+        <label>Subject</label>
+        <input type="text">
+    </div>
+    <div>
+        <label>Content</label>
         <input type="text">
     </div>
 </form>
