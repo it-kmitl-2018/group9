@@ -1,6 +1,7 @@
 package th.ac.kmitl.soa.group9.taxInvoice.model;
 
 import org.junit.jupiter.api.Test;
+import th.ac.kmitl.soa.group9.taxInvoice.models.IncludedNote;
 
 import java.sql.Timestamp;
 

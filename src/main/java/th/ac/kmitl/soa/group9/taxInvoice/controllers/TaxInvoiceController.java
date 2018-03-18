@@ -11,14 +11,14 @@ import th.ac.kmitl.soa.group9.taxInvoice.models.ExchangedDocument;
 public class TaxInvoiceController {
 
     @RequestMapping("/home/index")
-    public String taxInvoiceForm(Model model) { // Mapping GET Request and call home-index html page
+    public String taxInvoiceForm(Model model) {
         ExchangedDocument exchangedDocument = new ExchangedDocument();
         model.addAttribute("exchangedDocument", exchangedDocument);
         return "home-index";
     }
 
     @PostMapping(value = "/home/index", params = "create")
-    public String createTaxInvoice(@ModelAttribute ExchangedDocument exchangedDocument){
+    public String create(@ModelAttribute ExchangedDocument exchangedDocument){
         return "preview_taxinvoice";
     }
 }
