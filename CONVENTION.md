@@ -59,7 +59,7 @@ Team Convention G.9
 	
     ~~~java
     public class Main {
-	    private Human mHuman;
+	    private Human human;
 	    public MySweetPizza mySweetPizza;
     }
     ~~~
@@ -71,14 +71,12 @@ Team Convention G.9
 
     ~~~java
     public class Main {
-	    private ArrayList<Animal> mAnimals;
+	    private ArrayList<Animal> animals;
     }
     ~~~
     
 9.  Field naming
-    * Non-public, non-static field names start with m.
-    * Static field names start with s.
-    * Other fields start with a lower case letter.
+    * Start with a lower case letter.
     * Public static final fields (constants) are ALL_CAPS_WITH_UNDERSCORES
     
     ex.
@@ -86,11 +84,7 @@ Team Convention G.9
     ~~~java
     public class Main {
         public static final int SOME_CONSTANT = 42;
-        public int publicField;
-        private static Main sSingleton;
-        int mPackagePrivate;
-        private int mPrivate;
-        protected int mProtected;
+        public int myVariable;
     }
     ~~~
     
@@ -100,10 +94,10 @@ Team Convention G.9
 
     ~~~java
     public class Main {
-        private int mNumber0
-        private int mNumber1
-        private int mNumber2
-        private int mNumber3
+        private int number0
+        private int number1
+        private int number2
+        private int number3
     }
     ~~~
 
