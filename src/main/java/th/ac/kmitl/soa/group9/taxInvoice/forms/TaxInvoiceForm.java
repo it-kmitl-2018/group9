@@ -1,13 +1,18 @@
 package th.ac.kmitl.soa.group9.taxInvoice.forms;
 
-import java.sql.Timestamp;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.time.LocalDateTime;
 
 public class TaxInvoiceForm {
 
     public String id;
     public String name;
     public String typeCode;
-    public Timestamp issueDateTime;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
+    public LocalDateTime issueDateTime;
+
     public String purpose;
     public String purposeCode;
     public String globalID;
@@ -38,11 +43,11 @@ public class TaxInvoiceForm {
         this.typeCode = typeCode;
     }
 
-    public Timestamp getIssueDateTime() {
+    public LocalDateTime getIssueDateTime() {
         return issueDateTime;
     }
 
-    public void setIssueDateTime(Timestamp issueDateTime) {
+    public void setIssueDateTime(LocalDateTime issueDateTime) {
         this.issueDateTime = issueDateTime;
     }
 
