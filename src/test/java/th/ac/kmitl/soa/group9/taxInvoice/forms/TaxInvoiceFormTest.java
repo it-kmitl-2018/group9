@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import th.ac.kmitl.soa.group9.taxInvoice.definitions.TypeCode;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -12,7 +13,7 @@ public class TaxInvoiceFormTest {
     private String id = "RDTIV0575526000058001";
     private String name = TypeCode.TAX_INVOICE.getDescription();
     private String typeCode = TypeCode.TAX_INVOICE.getTypeCode();
-    private Timestamp issueDateTime = new Timestamp(System.currentTimeMillis());
+    private LocalDateTime issueDateTime = LocalDateTime.now();
     private String purpose = "คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง";
     private String purposeCode = "DCNS03";
     private String globalID = "ABCDEFGHIJKLMNOPQRST123456789012345";
