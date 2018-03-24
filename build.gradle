@@ -32,4 +32,5 @@ dependencies {
 	compile group: 'joda-time', name: 'joda-time', version: '2.9.9'
 	testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
 	testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+	compile("org.projectlombok:lombok:1.16.20")
 }
