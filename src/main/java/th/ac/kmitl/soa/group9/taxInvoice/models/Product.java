@@ -1,5 +1,7 @@
 package th.ac.kmitl.soa.group9.taxInvoice.models;
 
+import th.ac.kmitl.soa.group9.taxInvoice.models.IncludedNote;
+
 import java.sql.Timestamp;
 
 public class Product {
