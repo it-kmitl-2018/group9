@@ -22,7 +22,7 @@ Team Convention G.9
     ~~~java
     @Override
     public void quack(int amount) {
-        String duck = "Duck ";
+        String duck = "Duck";
         String quack = "Quack";
 
         for(int i = 0; i <= amount; i++){
@@ -41,7 +41,7 @@ Team Convention G.9
     ~~~java
     @Override
     public void quack(int amount) {
-        String duck = "Duck ";
+        String duck = "Duck";
         String quack = "Quack";
 
         if(amount == 1) System.out.println("Duck quack!");
@@ -86,22 +86,9 @@ Team Convention G.9
         public static final int SOME_CONSTANT = 42;
         public int myVariable;
     }
-    ~~~
-    
-10. ถ้าตัวแปรชื่อซ้ำให้เริ่มด้วยเลข 0 ต่อท้ายเสมอจากนั้นจะเพิ่มขึ้นทีละ 1
+    ~~~      
 
-    ex.
-
-    ~~~java
-    public class Main {
-        private int number0
-        private int number1
-        private int number2
-        private int number3
-    }
-    ~~~
-
-11. ปีกกา (เช่นของ if, function, class) ให้ปีกกาเริ่มต้นอยู่ในบรรทัดเดียวกันกับบรรทัดเริ่มต้น
+10. ปีกกา (เช่นของ if, function, class) ให้ปีกกาเริ่มต้นอยู่ในบรรทัดเดียวกันกับบรรทัดเริ่มต้น
 
     ex.
     
