@@ -34,7 +34,7 @@ public class TaxInvoiceControllerTest {
 
     @Test
     public void createTaxInvoice() throws Exception {
-        this.mMockMvc.perform(post("/taxinvoice/input_form")
+        this.mMockMvc.perform(post("/taxinvoice/create")
                 .param("id", "RDTIV0575526000058001")
                 .param("name", TypeCode.TAX_INVOICE.getDescription())
                 .param("typeCode", TypeCode.TAX_INVOICE.getTypeCode())

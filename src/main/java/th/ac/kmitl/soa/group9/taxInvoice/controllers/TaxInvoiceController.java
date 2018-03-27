@@ -19,7 +19,7 @@ public class TaxInvoiceController {
         return "taxinvoice_form";
     }
 
-    @PostMapping(value = "/taxinvoice/input_form")
+    @PostMapping(value = "/taxinvoice/create")
     public String create(@ModelAttribute ExchangedDocument exchangedDocument,
                          HttpSession session){
         session.setAttribute("exchangedDocument", exchangedDocument);
