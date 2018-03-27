@@ -12,14 +12,14 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class TaxInvoiceController {
 
-    @RequestMapping(value = "/home/index")
+    @RequestMapping(value = "/taxinvoice/input_form")
     public String taxInvoiceForm(Model model) {
         ExchangedDocument exchangedDocument = new ExchangedDocument();
         model.addAttribute("exchangedDocument", exchangedDocument);
-        return "home-index";
+        return "taxinvoice_form";
     }
 
-    @PostMapping(value = "/home/index")
+    @PostMapping(value = "/taxinvoice/input_form")
     public String create(@ModelAttribute ExchangedDocument exchangedDocument,
                          HttpSession session){
         session.setAttribute("exchangedDocument", exchangedDocument);

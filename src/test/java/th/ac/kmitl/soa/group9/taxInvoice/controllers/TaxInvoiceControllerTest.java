@@ -27,14 +27,14 @@ public class TaxInvoiceControllerTest {
 
     @Test
     public void previewShouldReturnPreviewTaxInvoiceHtmlPage() throws Exception {
-        this.mMockMvc.perform(get("/home/index"))
+        this.mMockMvc.perform(get("/taxinvoice/input_form"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML));
     }
 
     @Test
     public void createTaxInvoice() throws Exception {
-        this.mMockMvc.perform(post("/home/index")
+        this.mMockMvc.perform(post("/taxinvoice/input_form")
                 .param("id", "RDTIV0575526000058001")
                 .param("name", TypeCode.TAX_INVOICE.getDescription())
                 .param("typeCode", TypeCode.TAX_INVOICE.getTypeCode())
