@@ -10,7 +10,7 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class PreviewController {
 
-    @RequestMapping("/preview")
+    @RequestMapping("/taxinvoice/preview")
     public String preview(Model model,
                           HttpSession session) {
         ExchangedDocument exchangedDocument = (ExchangedDocument) session.getAttribute("exchangedDocument");

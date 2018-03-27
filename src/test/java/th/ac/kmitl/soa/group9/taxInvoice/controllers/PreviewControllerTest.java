@@ -23,7 +23,7 @@ public class PreviewControllerTest {
 
     @Test
     public void previewShouldReturnPreviewTaxInvoiceHtmlPage() throws Exception {
-        mMockMvc.perform(get("/preview"))
+        mMockMvc.perform(get("/taxinvoice/preview"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML));
     }

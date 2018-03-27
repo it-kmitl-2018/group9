@@ -23,6 +23,6 @@ public class TaxInvoiceController {
     public String create(@ModelAttribute ExchangedDocument exchangedDocument,
                          HttpSession session){
         session.setAttribute("exchangedDocument", exchangedDocument);
-        return "redirect:/preview";
+        return "redirect:/taxinvoice/preview";
     }
 }

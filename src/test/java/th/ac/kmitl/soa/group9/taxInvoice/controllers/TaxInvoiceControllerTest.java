@@ -41,6 +41,6 @@ public class TaxInvoiceControllerTest {
                 .param("purpose", "คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง")
                 .param("purposeCode", "DCNS03")
                 .param("globalId", "2.16.764.1.1.2.1.X.X.X"))
-                .andExpect(redirectedUrl("/preview"));
+                .andExpect(redirectedUrl("/taxinvoice/preview"));
     }
 }
