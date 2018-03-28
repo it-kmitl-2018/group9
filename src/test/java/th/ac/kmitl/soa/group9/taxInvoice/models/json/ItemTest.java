@@ -8,24 +8,24 @@ class ItemTest {
 
     private String description = "Toyota Fortuner 3.0V AT 2014 TRD สีเทา ดีเซล 3,000 cc. เกียร์ออโต้";
     private int quantity = 1;
-    private float price_per_item = 3990000;
-    private boolean have_vat = true;
-    private float vat_rate = 0.07f;
+    private float pricePerItem = 3990000;
+    private boolean haveVat = true;
+    private float vatRate = 0.07f;
 
     @Test
     public void shouldGetAllInfo() {
         Item item = Item.builder()
                 .description(this.description)
                 .quantity(this.quantity)
-                .price_per_item(this.price_per_item)
-                .have_vat(this.have_vat)
-                .vat_rate(this.vat_rate)
+                .pricePerItem(this.pricePerItem)
+                .haveVat(this.haveVat)
+                .vatRate(this.vatRate)
                 .build();
 
         assertEquals(this.description, item.description);
         assertEquals(this.quantity, item.quantity);
-        assertEquals(this.price_per_item, item.price_per_item);
-        assertEquals(this.have_vat, item.have_vat);
-        assertEquals(this.vat_rate, item.vat_rate);
+        assertEquals(this.pricePerItem, item.pricePerItem);
+        assertEquals(this.haveVat, item.haveVat);
+        assertEquals(this.vatRate, item.vatRate);
     }
 }
