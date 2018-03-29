@@ -21,14 +21,9 @@ public class PreviewControllerTest {
     @Autowired
     private MockMvc mMockMvc;
 
-    @MockBean
-    private PreviewController mController;
-
     @Test
     public void previewShouldReturnPreviewTaxInvoiceHtmlPage() throws Exception {
-        when(mController.preview()).thenReturn("preview_taxinvoice");
-
-        mMockMvc.perform(get("/preview"))
+        mMockMvc.perform(get("/taxinvoice/preview"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML));
     }

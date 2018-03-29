@@ -5,20 +5,25 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import th.ac.kmitl.soa.group9.taxInvoice.facades.TaxinvoiceFacade;
 import th.ac.kmitl.soa.group9.taxInvoice.models.ExchangedDocument;
+
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class TaxInvoiceController {
 
-    @RequestMapping("/home/index")
+    @RequestMapping(value = "/taxinvoice/input_form")
     public String taxInvoiceForm(Model model) {
         ExchangedDocument exchangedDocument = new ExchangedDocument();
-        model.addAttribute("exchangedDocument", exchangedDocument);
-        return "home-index";
+        TaxinvoiceFacade.getTaxinvoiceFacade().setAttributesToModel(model, exchangedDocument);
+        return "taxinvoice_form";
     }
 
-    @PostMapping(value = "/home/index", params = "create")
-    public String create(@ModelAttribute ExchangedDocument exchangedDocument){
-        return "preview_taxinvoice";
+    @PostMapping(value = "/taxinvoice/create")
+    public String create(@ModelAttribute ExchangedDocument exchangedDocument,
+                         HttpSession session) {
+        TaxinvoiceFacade.getTaxinvoiceFacade().setAttributesToSession(session, exchangedDocument);
+        return "redirect:/taxinvoice/preview";
     }
 }
