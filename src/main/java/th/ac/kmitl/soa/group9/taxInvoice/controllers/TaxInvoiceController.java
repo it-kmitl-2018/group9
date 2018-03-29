@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import th.ac.kmitl.soa.group9.taxInvoice.facades.TaxinvoiceFacade;
 import th.ac.kmitl.soa.group9.taxInvoice.models.ExchangedDocument;
 
 import javax.servlet.http.HttpSession;
@@ -15,14 +16,14 @@ public class TaxInvoiceController {
     @RequestMapping(value = "/taxinvoice/input_form")
     public String taxInvoiceForm(Model model) {
         ExchangedDocument exchangedDocument = new ExchangedDocument();
-        model.addAttribute("exchangedDocument", exchangedDocument);
+        TaxinvoiceFacade.getTaxinvoiceFacade().setAttributesToModel(model, exchangedDocument);
         return "taxinvoice_form";
     }
 
     @PostMapping(value = "/taxinvoice/create")
     public String create(@ModelAttribute ExchangedDocument exchangedDocument,
-                         HttpSession session){
-        session.setAttribute("exchangedDocument", exchangedDocument);
+                         HttpSession session) {
+        TaxinvoiceFacade.getTaxinvoiceFacade().setAttributesToSession(session, exchangedDocument);
         return "redirect:/taxinvoice/preview";
     }
 }
