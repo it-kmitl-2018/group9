@@ -1,7 +1,6 @@
 package th.ac.kmitl.soa.group9.taxInvoice.models.json;
 
 import org.junit.jupiter.api.Test;
-import th.ac.kmitl.soa.group9.taxInvoice.converters.JsonConverter;
 
 import static org.junit.jupiter.api.Assertions.*;
 
