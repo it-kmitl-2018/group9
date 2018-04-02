@@ -13,10 +13,10 @@ public class TaxInvoiceFormTest {
     private String id = "RDTIV0575526000058001";
     private String name = TypeCode.TAX_INVOICE.getDescription();
     private String typeCode = TypeCode.TAX_INVOICE.getTypeCode();
-    private LocalDateTime issueDateTime = LocalDateTime.now();
+    private Timestamp issueDateTime = new Timestamp(System.currentTimeMillis());
     private String purpose = "คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง";
     private String purposeCode = "DCNS03";
-    private String globalID = "ABCDEFGHIJKLMNOPQRST123456789012345";
+    private String globalId = "ABCDEFGHIJKLMNOPQRST123456789012345";
     private String subject = "หมายเหตุ";
     private String content = "ค่าบริการเพิ่มเติม";
 
@@ -30,7 +30,7 @@ public class TaxInvoiceFormTest {
         taxInvoiceForm.setIssueDateTime(this.issueDateTime);
         taxInvoiceForm.setPurpose(this.purpose);
         taxInvoiceForm.setPurposeCode(this.purposeCode);
-        taxInvoiceForm.setGlobalID(this.globalID);
+        taxInvoiceForm.setGlobalId(this.globalId);
         taxInvoiceForm.setSubject(this.subject);
         taxInvoiceForm.setContent(this.content);
 
@@ -40,7 +40,7 @@ public class TaxInvoiceFormTest {
         assertEquals(this.issueDateTime, taxInvoiceForm.getIssueDateTime());
         assertEquals(this.purpose, taxInvoiceForm.getPurpose());
         assertEquals(this.purposeCode, taxInvoiceForm.getPurposeCode());
-        assertEquals(this.globalID, taxInvoiceForm.getGlobalID());
+        assertEquals(this.globalId, taxInvoiceForm.getGlobalId());
         assertEquals(this.subject, taxInvoiceForm.getSubject());
         assertEquals(this.content, taxInvoiceForm.getContent());
     }

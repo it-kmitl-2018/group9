@@ -1,17 +1,48 @@
 package th.ac.kmitl.soa.group9.taxInvoice.models;
 
+import lombok.Builder;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.sql.Timestamp;
 
+@Builder
 public class ExchangedDocument {
+
     private String id;
     private String name;
     private String typeCode;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     private Timestamp issueDateTime;
+
     private String purpose;
     private String purposeCode;
     private String globalId;
     private Timestamp creationDateTime;
     private IncludedNote includedNote;
+
+    public ExchangedDocument() {
+    }
+
+    public ExchangedDocument(String id,
+                             String name,
+                             String typeCode,
+                             Timestamp issueDateTime,
+                             String purpose,
+                             String purposeCode,
+                             String globalId,
+                             Timestamp creationDateTime,
+                             IncludedNote includedNote) {
+        this.id = id;
+        this.name = name;
+        this.typeCode = typeCode;
+        this.issueDateTime = issueDateTime;
+        this.purpose = purpose;
+        this.purposeCode = purposeCode;
+        this.globalId = globalId;
+        this.creationDateTime = creationDateTime;
+        this.includedNote = includedNote;
+    }
 
     public String getId() {
         return id;
