@@ -1,6 +1,9 @@
-package th.ac.kmitl.soa.group9.taxInvoice.models;
+package th.ac.kmitl.soa.group9.taxInvoice.models.interpreter;
 
 import org.junit.jupiter.api.Test;
+import th.ac.kmitl.soa.group9.taxInvoice.models.interpreter.Address;
+import th.ac.kmitl.soa.group9.taxInvoice.models.interpreter.ContactDetail;
+import th.ac.kmitl.soa.group9.taxInvoice.models.interpreter.Seller;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

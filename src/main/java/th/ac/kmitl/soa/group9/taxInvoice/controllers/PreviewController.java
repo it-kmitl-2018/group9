@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import th.ac.kmitl.soa.group9.taxInvoice.facades.TaxinvoiceFacade;
-import th.ac.kmitl.soa.group9.taxInvoice.models.ExchangedDocument;
+import th.ac.kmitl.soa.group9.taxInvoice.models.interpreter.ExchangedDocument;
 
 import javax.servlet.http.HttpSession;
 
