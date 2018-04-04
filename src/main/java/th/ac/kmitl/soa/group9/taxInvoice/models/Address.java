@@ -1,5 +1,8 @@
 package th.ac.kmitl.soa.group9.taxInvoice.models;
 
+import lombok.Builder;
+
+@Builder
 public class Address {
 
     private String postCode;
