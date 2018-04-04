@@ -17,6 +17,33 @@ public class Address {
     private String countrySubDivisionId;
     private String buildingNumber;
 
+    public Address() {
+    }
+
+    public Address(String postCode,
+                   String buildingName,
+                   String soi,
+                   String village,
+                   String moo,
+                   String streetName,
+                   String cityName,
+                   String citySubDivisionName,
+                   String countryId,
+                   String countrySubDivisionId,
+                   String buildingNumber) {
+        this.postCode = postCode;
+        this.buildingName = buildingName;
+        this.soi = soi;
+        this.village = village;
+        this.moo = moo;
+        this.streetName = streetName;
+        this.cityName = cityName;
+        this.citySubDivisionName = citySubDivisionName;
+        this.countryId = countryId;
+        this.countrySubDivisionId = countrySubDivisionId;
+        this.buildingNumber = buildingNumber;
+    }
+
     public String getPostCode() {
         return postCode;
     }
