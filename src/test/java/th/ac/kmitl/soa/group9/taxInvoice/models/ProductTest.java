@@ -1,9 +1,7 @@
-package th.ac.kmitl.soa.group9.taxInvoice.models.interpreter;
+package th.ac.kmitl.soa.group9.taxInvoice.models;
 
 import org.junit.jupiter.api.Test;
-import th.ac.kmitl.soa.group9.taxInvoice.models.interpreter.IncludedNote;
-import th.ac.kmitl.soa.group9.taxInvoice.models.interpreter.Product;
-import th.ac.kmitl.soa.group9.taxInvoice.models.interpreter.ProductCategory;
+import th.ac.kmitl.soa.group9.taxInvoice.models.IncludedNote;
 
 import java.sql.Timestamp;
 

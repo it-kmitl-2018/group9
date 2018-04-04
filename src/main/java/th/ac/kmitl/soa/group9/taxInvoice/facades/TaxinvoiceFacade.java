@@ -1,7 +1,7 @@
 package th.ac.kmitl.soa.group9.taxInvoice.facades;
 
 import org.springframework.ui.Model;
-import th.ac.kmitl.soa.group9.taxInvoice.models.interpreter.ExchangedDocument;
+import th.ac.kmitl.soa.group9.taxInvoice.models.ExchangedDocument;
 
 import javax.servlet.http.HttpSession;
 

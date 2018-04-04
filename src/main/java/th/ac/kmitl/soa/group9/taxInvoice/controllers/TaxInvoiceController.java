@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import th.ac.kmitl.soa.group9.taxInvoice.facades.TaxinvoiceFacade;
-import th.ac.kmitl.soa.group9.taxInvoice.models.interpreter.ExchangedDocument;
+import th.ac.kmitl.soa.group9.taxInvoice.models.ExchangedDocument;
 
 import javax.servlet.http.HttpSession;
 
