@@ -21,5 +21,5 @@ public class Trader {
     public String email;
     public String telephone;
     public String fax;
-    public Address address;
+    public JsonAddress jsonAddress;
 }

@@ -1,6 +1,7 @@
 package th.ac.kmitl.soa.group9.taxInvoice;
 
 import th.ac.kmitl.soa.group9.taxInvoice.models.Address;
+import th.ac.kmitl.soa.group9.taxInvoice.models.json.JsonAddress;
 
 public class AddressWrapper {
 
@@ -10,30 +11,8 @@ public class AddressWrapper {
         this.address = address;
     }
 
-    public th.ac
-            .kmitl
-            .soa
-            .group9
-            .taxInvoice
-            .models
-            .json
-            .Address getModelClass(){
-        th.ac
-                .kmitl
-                .soa
-                .group9
-                .taxInvoice
-                .models
-                .json
-                .Address address = th.ac
-                .kmitl
-                .soa
-                .group9
-                .taxInvoice
-                .models
-                .json
-                .Address
-                .builder()
+    public JsonAddress getModelClass(){
+        JsonAddress jsonAddress = JsonAddress.builder()
                 .lineOne(getLineOne(this.address.getBuildingName(),
                         this.address.getBuildingNumber()))
                 .lineTwo(getLineTwo(this.address.getVillage(),
@@ -47,7 +26,7 @@ public class AddressWrapper {
                 .countryName(this.address.getCountryId())
                 .build();
 
-        return address;
+        return jsonAddress;
     }
 
     private String getLineOne(String buildingName, String buildingNumber){
