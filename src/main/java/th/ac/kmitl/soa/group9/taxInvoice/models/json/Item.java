@@ -6,7 +6,10 @@ import lombok.Builder;
 @Builder
 public class Item {
 
+    @JsonProperty("description")
     public String description;
+
+    @JsonProperty("quantity")
     public int quantity;
 
     @JsonProperty("price_per_item")
