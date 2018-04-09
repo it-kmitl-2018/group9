@@ -45,6 +45,7 @@ public class AddressWrapper {
                          String moo,
                          String streetName){
         String lineContent = "";
+
         switch (lineNum){
             case 1: lineContent = buildingName + " " + buildingNumber;
             break;
