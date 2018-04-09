@@ -8,13 +8,21 @@ import java.util.List;
 @Builder
 public class TaxInvoice {
 
+    @JsonProperty("number")
     public String number;
+
+    @JsonProperty("seller")
     public Trader seller;
+
+    @JsonProperty("buyer")
     public Trader buyer;
 
     @JsonProperty("transaction_date")
     public String transactionDate;
 
+    @JsonProperty("note")
     public Note note;
+
+    @JsonProperty("items")
     public List<Item> items;
 }
