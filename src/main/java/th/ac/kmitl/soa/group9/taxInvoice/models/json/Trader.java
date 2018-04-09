@@ -2,7 +2,7 @@ package th.ac.kmitl.soa.group9.taxInvoice.models.json;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
-import th.ac.kmitl.soa.group9.taxInvoice.models.Address;
+import th.ac.kmitl.soa.group9.taxInvoice.models.interpreter.Address;
 
 @Builder
 public class Trader {
