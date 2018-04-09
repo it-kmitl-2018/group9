@@ -13,7 +13,7 @@ class TraderTest {
     private String email = "sales@toyotathonburi.com";
     private String telephone = "02-4799009";
     private String fax = "02-4799009";
-    private Address address = Address.builder().build();
+    private JsonAddress jsonAddress = JsonAddress.builder().build();
 
     @Test
     public void shouldGetAllInfo() {
@@ -25,7 +25,7 @@ class TraderTest {
                 .email(this.email)
                 .telephone(this.telephone)
                 .fax(this.fax)
-                .address(this.address)
+                .jsonAddress(this.jsonAddress)
                 .build();
 
         assertEquals(this.taxNumber, trader.taxNumber);
@@ -35,6 +35,6 @@ class TraderTest {
         assertEquals(this.email , trader.email);
         assertEquals(this.telephone , trader.telephone);
         assertEquals(this.fax , trader.fax);
-        assertEquals(this.address , trader.address);
+        assertEquals(this.jsonAddress, trader.jsonAddress);
     }
 }
