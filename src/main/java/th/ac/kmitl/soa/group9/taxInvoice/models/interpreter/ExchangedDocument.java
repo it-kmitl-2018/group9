@@ -1,4 +1,4 @@
-package th.ac.kmitl.soa.group9.taxInvoice.models;
+package th.ac.kmitl.soa.group9.taxInvoice.models.interpreter;
 
 import lombok.Builder;
 import org.springframework.format.annotation.DateTimeFormat;

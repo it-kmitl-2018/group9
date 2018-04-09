@@ -1,6 +1,4 @@
-package th.ac.kmitl.soa.group9.taxInvoice.models;
-
-import th.ac.kmitl.soa.group9.taxInvoice.models.IncludedNote;
+package th.ac.kmitl.soa.group9.taxInvoice.models.interpreter;
 
 import java.sql.Timestamp;
 

@@ -1,8 +1,8 @@
 package th.ac.kmitl.soa.group9.taxInvoice.interpreterwrappers;
 
 import th.ac.kmitl.soa.group9.taxInvoice.forms.TaxInvoiceForm;
-import th.ac.kmitl.soa.group9.taxInvoice.models.ExchangedDocument;
-import th.ac.kmitl.soa.group9.taxInvoice.models.IncludedNote;
+import th.ac.kmitl.soa.group9.taxInvoice.models.interpreter.ExchangedDocument;
+import th.ac.kmitl.soa.group9.taxInvoice.models.interpreter.IncludedNote;
 
 import java.sql.Timestamp;
 
