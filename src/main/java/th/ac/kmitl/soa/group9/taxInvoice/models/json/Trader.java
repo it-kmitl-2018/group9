@@ -18,8 +18,15 @@ public class Trader {
     @JsonProperty("name_th")
     public String nameTh;
 
+    @JsonProperty("email")
     public String email;
+
+    @JsonProperty("telephone")
     public String telephone;
+
+    @JsonProperty("fax")
     public String fax;
+
+    @JsonProperty("address")
     public Address address;
 }
