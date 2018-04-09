@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class AddressTest {
+class JsonAddressTest {
 
     private String lineOne = "สำนักงานใหญ่ เลขที่ 313/1";
     private String lineTwo = "ถนนรัชดาภิเษก แขวงบุคลโล เขตธนบุรี กรุงเทพมหานคร 10600";
@@ -16,7 +16,7 @@ class AddressTest {
 
     @Test
     public void shouldGetAllInfo() {
-        Address address = Address.builder()
+        JsonAddress jsonAddress = JsonAddress.builder()
                 .lineOne(this.lineOne)
                 .lineTwo(this.lineTwo)
                 .cityName(this.cityName)
@@ -26,12 +26,12 @@ class AddressTest {
                 .countryName(this.countryName)
                 .build();
 
-        assertEquals(this.lineOne , address.lineOne);
-        assertEquals(this.lineTwo , address.lineTwo);
-        assertEquals(this.cityName , address.cityName);
-        assertEquals(this.citySubDivisionName , address.citySubDivisionName);
-        assertEquals(this.postCode , address.postCode);
-        assertEquals(this.countrySubDivision , address.countrySubDivision);
-        assertEquals(this.countryName , address.countryName);
+        assertEquals(this.lineOne , jsonAddress.lineOne);
+        assertEquals(this.lineTwo , jsonAddress.lineTwo);
+        assertEquals(this.cityName , jsonAddress.cityName);
+        assertEquals(this.citySubDivisionName , jsonAddress.citySubDivisionName);
+        assertEquals(this.postCode , jsonAddress.postCode);
+        assertEquals(this.countrySubDivision , jsonAddress.countrySubDivision);
+        assertEquals(this.countryName , jsonAddress.countryName);
     }
 }
