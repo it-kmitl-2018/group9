@@ -1,6 +1,6 @@
 package th.ac.kmitl.soa.group9.taxInvoice;
 
-import th.ac.kmitl.soa.group9.taxInvoice.models.Address;
+import th.ac.kmitl.soa.group9.taxInvoice.models.interpreter.Address;
 import th.ac.kmitl.soa.group9.taxInvoice.models.json.JsonAddress;
 
 public class AddressWrapper {
