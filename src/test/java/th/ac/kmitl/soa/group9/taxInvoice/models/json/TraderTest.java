@@ -25,7 +25,7 @@ class TraderTest {
                 .email(this.email)
                 .telephone(this.telephone)
                 .fax(this.fax)
-                .jsonAddress(this.jsonAddress)
+                .address(this.jsonAddress)
                 .build();
 
         assertEquals(this.taxNumber, trader.taxNumber);
@@ -35,6 +35,6 @@ class TraderTest {
         assertEquals(this.email , trader.email);
         assertEquals(this.telephone , trader.telephone);
         assertEquals(this.fax , trader.fax);
-        assertEquals(this.jsonAddress, trader.jsonAddress);
+        assertEquals(this.jsonAddress, trader.address);
     }
 }

@@ -2,7 +2,6 @@ package th.ac.kmitl.soa.group9.taxInvoice.models.json;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
-import th.ac.kmitl.soa.group9.taxInvoice.models.interpreter.Address;
 
 @Builder
 public class Trader {
@@ -27,8 +26,7 @@ public class Trader {
 
     @JsonProperty("fax")
     public String fax;
-    public JsonAddress jsonAddress;
 
     @JsonProperty("address")
-    public Address address;
+    public JsonAddress address;
 }
