@@ -33,4 +33,5 @@ dependencies {
 	testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
 	testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 	compile("org.projectlombok:lombok:1.16.20")
+	compile("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.9.5")
 }
