@@ -4,19 +4,19 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class NoteTest {
+class JsonNoteTest {
 
     private String subject;
     private String content;
 
     @Test
     public void shouldGetAllInfo() {
-        Note note = Note.builder()
+        JsonNote jsonNote = JsonNote.builder()
                 .content(this.content)
                 .subject(this.subject)
                 .build();
 
-        assertEquals(this.content, note.content);
-        assertEquals(this.subject, note.subject);
+        assertEquals(this.content, jsonNote.content);
+        assertEquals(this.subject, jsonNote.subject);
     }
 }
