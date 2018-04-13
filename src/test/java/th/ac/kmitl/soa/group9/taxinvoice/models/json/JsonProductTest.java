@@ -1,6 +1,8 @@
 package th.ac.kmitl.soa.group9.taxinvoice.models.json;
 
 import org.junit.Test;
+import th.ac.kmitl.soa.group9.taxinvoice.models.interpreter.IncludedNote;
+import th.ac.kmitl.soa.group9.taxinvoice.models.interpreter.ProductCategory;
 
 import java.sql.Timestamp;
 
@@ -14,11 +16,9 @@ public class JsonProductTest {
     private String description = "ใช้งานร่วมกับเครื่องถ่ายเอกสาร เครื่องพิมพ์อิงค์เจ็ท เครื่องพิมพ์เลเซอร์ และเครื่องพิมพ์ดีดทั่วไป";
     private String lotNumber = "10000";
     private Timestamp expiryDateTime = new Timestamp(System.currentTimeMillis());
-    private String productClassCode = "14111507";
-    private String productClassName = "กระดาษถ่ายเอกสารหรือพิมพ์งานทั่วไป";
+    private ProductCategory productCategory = ProductCategory.builder().build();
     private String countryId = "TH";
-    private String subject = "หมายเหตุ";
-    private String content = "";
+    private IncludedNote note = IncludedNote.builder().build();
 
     @Test
     public void shouldGetAllInfo(){
@@ -29,11 +29,9 @@ public class JsonProductTest {
                 .description(this.description)
                 .lotNumber(this.lotNumber)
                 .expiryDateTime(this.expiryDateTime)
-                .productClassCode(this.productClassCode)
-                .productClassName(this.productClassName)
+                .productCategory(this.productCategory)
                 .countryId(this.countryId)
-                .subject(this.subject)
-                .content(this.content)
+                .note(this.note)
                 .build();
 
         assertEquals(this.id , jsonProduct.id);
@@ -42,10 +40,8 @@ public class JsonProductTest {
         assertEquals(this.description, jsonProduct.description);
         assertEquals(this.lotNumber , jsonProduct.lotNumber);
         assertEquals(this.expiryDateTime , jsonProduct.expiryDateTime);
-        assertEquals(this.productClassCode , jsonProduct.productClassCode);
-        assertEquals(this.productClassName , jsonProduct.productClassName);
+        assertEquals(this.productCategory , jsonProduct.productCategory);
         assertEquals(this.countryId , jsonProduct.countryId);
-        assertEquals(this.subject , jsonProduct.subject);
-        assertEquals(this.content , jsonProduct.content);
+        assertEquals(this.note , jsonProduct.note);
     }
 }

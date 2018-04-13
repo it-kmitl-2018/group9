@@ -2,6 +2,8 @@ package th.ac.kmitl.soa.group9.taxinvoice.models.json;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
+import th.ac.kmitl.soa.group9.taxinvoice.models.interpreter.IncludedNote;
+import th.ac.kmitl.soa.group9.taxinvoice.models.interpreter.ProductCategory;
 
 import java.sql.Timestamp;
 
@@ -26,18 +28,12 @@ public class JsonProduct {
     @JsonProperty("expiry_date_time")
     public Timestamp expiryDateTime;
 
-    @JsonProperty("class_code")
-    public String productClassCode;
-
-    @JsonProperty("class_name")
-    public String productClassName;
+    @JsonProperty("product_category")
+    public ProductCategory productCategory;
 
     @JsonProperty("country_id")
     public String countryId;
 
-    @JsonProperty("subject")
-    public String subject;
-
-    @JsonProperty("content")
-    public String content;
+    @JsonProperty("note")
+    public IncludedNote note;
 }
