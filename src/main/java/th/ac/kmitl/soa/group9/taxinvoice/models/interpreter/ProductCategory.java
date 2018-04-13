@@ -1,9 +1,20 @@
 package th.ac.kmitl.soa.group9.taxinvoice.models.interpreter;
 
+import lombok.Builder;
+
+@Builder
 public class ProductCategory {
 
     private String code;
     private String name;
+
+    public ProductCategory() {
+    }
+
+    public ProductCategory(String code, String name) {
+        this.code = code;
+        this.name = name;
+    }
 
     public String getCode() {
         return code;
