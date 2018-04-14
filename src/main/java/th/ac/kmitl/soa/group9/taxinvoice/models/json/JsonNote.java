@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 
 @Builder
-public class Note {
+public class JsonNote {
 
     @JsonProperty("subject")
     public String subject;
