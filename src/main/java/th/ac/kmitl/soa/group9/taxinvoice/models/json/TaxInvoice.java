@@ -20,8 +20,8 @@ public class TaxInvoice {
     @JsonProperty("transaction_date")
     public String transactionDate;
 
-    @JsonProperty("note")
-    public Note note;
+    @JsonProperty("jsonNote")
+    public JsonNote jsonNote;
 
     @JsonProperty("items")
     public List<Item> items;
