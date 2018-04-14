@@ -13,7 +13,7 @@ class TaxInvoiceTest {
     private Trader seller = Trader.builder().build();
     private Trader buyer = Trader.builder().build();
     private String transactionDate = "2017-12-18 12:24:00";
-    private JsonNote jsonNote = JsonNote.builder().build();
+    private JsonNote note = JsonNote.builder().build();
     private List<Item> items = new ArrayList<>();
 
     @Test
@@ -23,7 +23,7 @@ class TaxInvoiceTest {
                 .seller(this.seller)
                 .buyer(this.buyer)
                 .transactionDate(this.transactionDate)
-                .jsonNote(this.jsonNote)
+                .note(this.note)
                 .items(this.items)
                 .build();
 
@@ -31,7 +31,7 @@ class TaxInvoiceTest {
         assertEquals(this.seller , taxInvoice.seller);
         assertEquals(this.buyer , taxInvoice.buyer);
         assertEquals(this.transactionDate , taxInvoice.transactionDate);
-        assertEquals(this.jsonNote, taxInvoice.jsonNote);
+        assertEquals(this.note, taxInvoice.note);
         assertEquals(this.items , taxInvoice.items);
     }
 }
