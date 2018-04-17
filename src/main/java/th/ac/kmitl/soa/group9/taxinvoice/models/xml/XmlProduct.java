@@ -1,4 +1,4 @@
-package th.ac.kmitl.soa.group9.taxinvoice;
+package th.ac.kmitl.soa.group9.taxinvoice.models.xml;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.Builder;
