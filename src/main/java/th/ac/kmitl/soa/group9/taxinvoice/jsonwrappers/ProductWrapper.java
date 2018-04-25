@@ -1,7 +1,7 @@
 package th.ac.kmitl.soa.group9.taxinvoice.jsonwrappers;
 
 import th.ac.kmitl.soa.group9.taxinvoice.models.interpreter.Product;
-import th.ac.kmitl.soa.group9.taxinvoice.models.json.JsonProduct;
+import th.ac.kmitl.soa.group9.taxinvoice.models.xml.XmlProduct;
 
 public class ProductWrapper {
 
@@ -11,8 +11,8 @@ public class ProductWrapper {
         this.product = product;
     }
 
-    public JsonProduct getModelClass(){
-        JsonProduct jsonProduct = JsonProduct.builder()
+    public XmlProduct getModelClass(){
+        XmlProduct xmlProduct = XmlProduct.builder()
                 .id(product.getId())
                 .globalId(product.getGlobalId())
                 .name(product.getName())
@@ -23,6 +23,6 @@ public class ProductWrapper {
                 .countryId(product.getCountryId())
                 .note(product.getNote())
                 .build();
-        return jsonProduct;
+        return xmlProduct;
     }
 }
