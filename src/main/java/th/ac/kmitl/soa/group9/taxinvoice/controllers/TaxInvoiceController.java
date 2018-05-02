@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import th.ac.kmitl.soa.group9.taxinvoice.facades.TaxinvoiceFacade;
 import th.ac.kmitl.soa.group9.taxinvoice.forms.TaxInvoiceForm;
-import th.ac.kmitl.soa.group9.taxinvoice.models.interpreter.ExchangedDocument;
 
 import javax.servlet.http.HttpSession;
 
