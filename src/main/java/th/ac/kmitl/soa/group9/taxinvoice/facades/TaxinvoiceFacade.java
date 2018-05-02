@@ -1,6 +1,7 @@
 package th.ac.kmitl.soa.group9.taxinvoice.facades;
 
 import org.springframework.ui.Model;
+import th.ac.kmitl.soa.group9.taxinvoice.forms.TaxInvoiceForm;
 import th.ac.kmitl.soa.group9.taxinvoice.models.interpreter.ExchangedDocument;
 
 import javax.servlet.http.HttpSession;
@@ -20,12 +21,12 @@ public class TaxinvoiceFacade {
     }
 
     public void setAttributesToSession(HttpSession session,
-                                       ExchangedDocument exchangedDocument) {
-        session.setAttribute("exchangedDocument", exchangedDocument);
+                                       TaxInvoiceForm taxInvoiceForm) {
+        session.setAttribute("taxInvoiceForm", taxInvoiceForm);
     }
 
     public void setAttributesToModel(Model model,
-                                     ExchangedDocument exchangedDocument) {
-        model.addAttribute("exchangedDocument", exchangedDocument);
+                                     TaxInvoiceForm taxInvoiceForm) {
+        model.addAttribute("taxInvoiceForm", taxInvoiceForm);
     }
 }
