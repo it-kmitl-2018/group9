@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import th.ac.kmitl.soa.group9.taxinvoice.facades.TaxinvoiceFacade;
-import th.ac.kmitl.soa.group9.taxinvoice.models.interpreter.ExchangedDocument;
+import th.ac.kmitl.soa.group9.taxinvoice.forms.TaxInvoiceForm;
 
 import javax.servlet.http.HttpSession;
 
@@ -15,7 +15,7 @@ public class PreviewController {
     public String preview(Model model,
                           HttpSession session) {
         TaxinvoiceFacade.getTaxinvoiceFacade().setAttributesToModel(model,
-                (ExchangedDocument) session.getAttribute("exchangedDocument"));
+                (TaxInvoiceForm) session.getAttribute("taxInvoiceForm"));
         return "preview_taxinvoice";
     }
 }
