@@ -7,7 +7,7 @@ import java.sql.Timestamp;
 
 import static org.junit.Assert.assertEquals;
 
-public class XmlExchangedDocumentTest {
+public class ExchangedDocumentXmlTest {
 
     private String id = "RDTIV0575526000058001";
     private String name = TypeCode.TAX_INVOICE.getDescription();
@@ -22,7 +22,7 @@ public class XmlExchangedDocumentTest {
 
     @Test
     public void shouldGetAllInfo(){
-        XmlExchangedDocument xmlExchangedDocument = XmlExchangedDocument.builder()
+        ExchangedDocumentXml exchangedDocumentXml = ExchangedDocumentXml.builder()
                 .id(id)
                 .name(name)
                 .typeCode(typeCode)
@@ -35,15 +35,15 @@ public class XmlExchangedDocumentTest {
                 .content(content)
                 .build();
 
-        assertEquals(this.id , xmlExchangedDocument.id);
-        assertEquals(this.name , xmlExchangedDocument.name);
-        assertEquals(this.typeCode ,xmlExchangedDocument.typeCode);
-        assertEquals(this.issueDateTime, xmlExchangedDocument.issueDateTime);
-        assertEquals(this.purpose , xmlExchangedDocument.purpose);
-        assertEquals(this.purposeCode , xmlExchangedDocument.purposeCode);
-        assertEquals(this.globalId , xmlExchangedDocument.globalId);
-        assertEquals(this.creationDateTime , xmlExchangedDocument.creationDateTime);
-        assertEquals(this.subject , xmlExchangedDocument.subject);
-        assertEquals(this.content , xmlExchangedDocument.content);
+        assertEquals(this.id , exchangedDocumentXml.id);
+        assertEquals(this.name , exchangedDocumentXml.name);
+        assertEquals(this.typeCode , exchangedDocumentXml.typeCode);
+        assertEquals(this.issueDateTime, exchangedDocumentXml.issueDateTime);
+        assertEquals(this.purpose , exchangedDocumentXml.purpose);
+        assertEquals(this.purposeCode , exchangedDocumentXml.purposeCode);
+        assertEquals(this.globalId , exchangedDocumentXml.globalId);
+        assertEquals(this.creationDateTime , exchangedDocumentXml.creationDateTime);
+        assertEquals(this.subject , exchangedDocumentXml.subject);
+        assertEquals(this.content , exchangedDocumentXml.content);
     }
 }

@@ -8,7 +8,7 @@ import th.ac.kmitl.soa.group9.taxinvoice.models.interpreter.ProductCategory;
 import java.sql.Timestamp;
 
 @Builder
-public class XmlProduct {
+public class ProductXml {
 
     @JacksonXmlProperty(localName = "id")
     public String id;

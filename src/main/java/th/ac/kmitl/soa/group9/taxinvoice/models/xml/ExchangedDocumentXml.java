@@ -6,7 +6,7 @@ import lombok.Builder;
 import java.sql.Timestamp;
 
 @Builder
-public class XmlExchangedDocument {
+public class ExchangedDocumentXml {
 
     @JacksonXmlProperty(localName = "id")
     public String id;
