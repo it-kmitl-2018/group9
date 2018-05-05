@@ -16,14 +16,14 @@ public class TaxInvoiceController {
     @RequestMapping(value = "/taxinvoice/input_form")
     public String taxInvoiceForm(Model model) {
         TaxInvoiceForm taxInvoiceForm = new TaxInvoiceForm();
-        TaxinvoiceFacade.getTaxinvoiceFacade().setAttributesToModel(model, taxInvoiceForm);
+        TaxinvoiceFacade.getTaxinvoiceFacade().setAttributesToModel(model, taxInvoiceForm, "taxInvoiceForm");
         return "taxinvoice_form";
     }
 
     @PostMapping(value = "/taxinvoice/create")
     public String create(@ModelAttribute TaxInvoiceForm taxInvoiceForm,
                          HttpSession session) {
-        TaxinvoiceFacade.getTaxinvoiceFacade().setAttributesToSession(session, taxInvoiceForm);
+        TaxinvoiceFacade.getTaxinvoiceFacade().setAttributesToSession(session, taxInvoiceForm, "taxInvoiceForm");
         return "redirect:/taxinvoice/preview";
     }
 }

@@ -6,7 +6,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.sql.Timestamp;
 
 @Builder
-public class TaxInvoiceForm {
+public class TaxInvoiceForm implements BaseForm{
 
     private String id;
     private String name;

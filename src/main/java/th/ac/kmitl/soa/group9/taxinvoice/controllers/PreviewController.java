@@ -15,7 +15,7 @@ public class PreviewController {
     public String preview(Model model,
                           HttpSession session) {
         TaxinvoiceFacade.getTaxinvoiceFacade().setAttributesToModel(model,
-                (TaxInvoiceForm) session.getAttribute("taxInvoiceForm"));
+                (TaxInvoiceForm) session.getAttribute("taxInvoiceForm"), "taxInvoiceForm");
         return "preview_taxinvoice";
     }
 }

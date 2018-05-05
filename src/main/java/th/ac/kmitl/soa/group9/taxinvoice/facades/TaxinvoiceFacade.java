@@ -1,7 +1,7 @@
 package th.ac.kmitl.soa.group9.taxinvoice.facades;
 
 import org.springframework.ui.Model;
-import th.ac.kmitl.soa.group9.taxinvoice.forms.TaxInvoiceForm;
+import th.ac.kmitl.soa.group9.taxinvoice.forms.BaseForm;
 
 import javax.servlet.http.HttpSession;
 
@@ -20,12 +20,14 @@ public class TaxinvoiceFacade {
     }
 
     public void setAttributesToSession(HttpSession session,
-                                       TaxInvoiceForm taxInvoiceForm) {
-        session.setAttribute("taxInvoiceForm", taxInvoiceForm);
+                                       BaseForm baseForm,
+                                       String attributeName) {
+        session.setAttribute(attributeName, baseForm);
     }
 
     public void setAttributesToModel(Model model,
-                                     TaxInvoiceForm taxInvoiceForm) {
-        model.addAttribute("taxInvoiceForm", taxInvoiceForm);
+                                     BaseForm baseForm,
+                                     String attributeName) {
+        model.addAttribute(attributeName, baseForm);
     }
 }
