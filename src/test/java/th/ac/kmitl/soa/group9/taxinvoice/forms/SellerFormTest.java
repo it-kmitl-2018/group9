@@ -26,7 +26,7 @@ public class SellerFormTest {
 
     @Test
     public void shouldGetAllInfo() {
-        SellerForm sellerForm = new SellerForm();
+        final SellerForm sellerForm = SellerForm.builder().build();
 
         sellerForm.setId(this.id);
         sellerForm.setGlobalId(this.globalId);
