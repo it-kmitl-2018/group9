@@ -1,4 +1,4 @@
-package th.ac.kmitl.soa.group9.taxinvoice.jsonwrappers;
+package th.ac.kmitl.soa.group9.taxinvoice.xmlwrappers;
 
 import th.ac.kmitl.soa.group9.taxinvoice.models.interpreter.Product;
 import th.ac.kmitl.soa.group9.taxinvoice.models.xml.ProductXml;
