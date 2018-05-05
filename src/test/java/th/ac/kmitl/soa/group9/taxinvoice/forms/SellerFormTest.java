@@ -26,25 +26,25 @@ public class SellerFormTest {
 
     @Test
     public void shouldGetAllInfo() {
-        final SellerForm sellerForm = SellerForm.builder().build();
-
-        sellerForm.setId(this.id);
-        sellerForm.setGlobalId(this.globalId);
-        sellerForm.setName(this.name);
-        sellerForm.setTaxRegistrationId(this.taxRegistrationId);
-        sellerForm.setBranchId(this.branchId);
-        sellerForm.setEmail(this.email);
-        sellerForm.setBuilding(this.building);
-        sellerForm.setBuildingNumber(this.buildingNumber);
-        sellerForm.setSoi(this.soi);
-        sellerForm.setVillage(this.village);
-        sellerForm.setMoo(this.moo);
-        sellerForm.setStreetName(this.streetName);
-        sellerForm.setCitySub(this.citySub);
-        sellerForm.setCity(this.city);
-        sellerForm.setCountrySub(this.countrySub);
-        sellerForm.setCountry(this.country);
-        sellerForm.setPostCode(this.postCode);
+        final SellerForm sellerForm = SellerForm.builder()
+                .id(this.id)
+                .globalId(this.globalId)
+                .name(name)
+                .taxRegistrationId(this.taxRegistrationId)
+                .branchId(this.branchId)
+                .email(this.email)
+                .building(this.building)
+                .buildingNumber(this.buildingNumber)
+                .soi(this.soi)
+                .village(this.village)
+                .moo(this.moo)
+                .streetName(this.streetName)
+                .citySub(this.citySub)
+                .city(this.city)
+                .countrySub(this.countrySub)
+                .country(this.country)
+                .postCode(this.postCode)
+                .build();
 
         assertEquals(this.id, sellerForm.getId());
         assertEquals(this.globalId, sellerForm.getGlobalId());
