@@ -3,13 +3,12 @@ package th.ac.kmitl.soa.group9.taxinvoice.models.xml;
 import org.junit.Test;
 import th.ac.kmitl.soa.group9.taxinvoice.models.interpreter.IncludedNote;
 import th.ac.kmitl.soa.group9.taxinvoice.models.interpreter.ProductCategory;
-import th.ac.kmitl.soa.group9.taxinvoice.models.xml.XmlProduct;
 
 import java.sql.Timestamp;
 
 import static org.junit.Assert.assertEquals;
 
-public class XmlProductTest {
+public class ProductXmlTest {
 
     private String id = "ABCDEFGHIJKLMNOPQRST123456789012345";
     private String globalId = "12345678901234";
@@ -23,7 +22,7 @@ public class XmlProductTest {
 
     @Test
     public void shouldGetAllInfo(){
-        XmlProduct xmlProduct = XmlProduct.builder()
+        ProductXml productXml = ProductXml.builder()
                 .id(this.id)
                 .globalId(this.globalId)
                 .name(this.name)
@@ -35,14 +34,14 @@ public class XmlProductTest {
                 .note(this.note)
                 .build();
 
-        assertEquals(this.id , xmlProduct.id);
-        assertEquals(this.globalId , xmlProduct.globalId);
-        assertEquals(this.name ,xmlProduct.name);
-        assertEquals(this.description, xmlProduct.description);
-        assertEquals(this.lotNumber , xmlProduct.lotNumber);
-        assertEquals(this.expiryDateTime , xmlProduct.expiryDateTime);
-        assertEquals(this.productCategory , xmlProduct.productCategory);
-        assertEquals(this.countryId , xmlProduct.countryId);
-        assertEquals(this.note , xmlProduct.note);
+        assertEquals(this.id , productXml.id);
+        assertEquals(this.globalId , productXml.globalId);
+        assertEquals(this.name , productXml.name);
+        assertEquals(this.description, productXml.description);
+        assertEquals(this.lotNumber , productXml.lotNumber);
+        assertEquals(this.expiryDateTime , productXml.expiryDateTime);
+        assertEquals(this.productCategory , productXml.productCategory);
+        assertEquals(this.countryId , productXml.countryId);
+        assertEquals(this.note , productXml.note);
     }
 }
