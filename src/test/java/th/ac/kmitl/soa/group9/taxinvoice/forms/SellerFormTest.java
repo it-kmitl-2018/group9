@@ -26,7 +26,7 @@ public class SellerFormTest {
 
     @Test
     public void shouldGetAllInfo() {
-        final SellerForm sellerForm = SellerForm.builder()
+        SellerForm sellerForm = SellerForm.builder()
                 .id(this.id)
                 .globalId(this.globalId)
                 .name(name)
