@@ -2,6 +2,7 @@ package th.ac.kmitl.soa.group9.taxinvoice.definitions;
 
 import lombok.Getter;
 
+@Getter
 public enum ReferenceCode {
 
     INVOICE_NUMBER("IV", "เลขใบแจ้งหนี้", "Reference number to identify an invoice"),
@@ -21,12 +22,7 @@ public enum ReferenceCode {
         this.descriptionEn = descriptionEn;
     }
 
-    @Getter
     private String refCode;
-
-    @Getter
     private String descriptionTh;
-
-    @Getter
     private String descriptionEn;
 }
