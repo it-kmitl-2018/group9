@@ -28,4 +28,22 @@ class ReferenceCodeTest {
         assertEquals(ReferenceCode.CREDIT_NOTE_NUMBER.getCode(), CREDIT_NOTE_NUMBER_CODE);
         assertEquals(ReferenceCode.MUTUAL_REFERENCE_NUMBER.getCode(), MUTUAL_REFERENCE_NUMBER_CODE);
     }
+
+    @Test
+    public void shouldGetCorrectReferenceCode() {
+        assertEquals(ReferenceCode.INVOICE_NUMBER, ReferenceCode.parse(INVOICE_NUMBER_CODE));
+        assertEquals(ReferenceCode.DOCUMENT_REFERENCE_NUMBER, ReferenceCode.parse(DOCUMENT_REFERENCE_NUMBER_CODE));
+        assertEquals(ReferenceCode.SERIAL_NUMBER, ReferenceCode.parse(SERIAL_NUMBER_CODE));
+        assertEquals(ReferenceCode.ORDER_NUMBER, ReferenceCode.parse(ORDER_NUMBER_CODE));
+        assertEquals(ReferenceCode.ITEM_NUMBER, ReferenceCode.parse(ITEM_NUMBER_CODE));
+        assertEquals(ReferenceCode.PREVIOUS_TAX_INVOICE_NUMBER, ReferenceCode.parse(PREVIOUS_TAX_INVOICE_NUMBER_CODE));
+        assertEquals(ReferenceCode.DEBIT_NOTE_NUMBER, ReferenceCode.parse(DEBIT_NOTE_NUMBER_CODE));
+        assertEquals(ReferenceCode.CREDIT_NOTE_NUMBER, ReferenceCode.parse(CREDIT_NOTE_NUMBER_CODE));
+        assertEquals(ReferenceCode.MUTUAL_REFERENCE_NUMBER, ReferenceCode.parse(MUTUAL_REFERENCE_NUMBER_CODE));
+    }
+
+    @Test
+    public void shouldGetNullWhenParsingNotExistedCode() {
+        assertNull(ReferenceCode.parse("123"));
+    }
 }
