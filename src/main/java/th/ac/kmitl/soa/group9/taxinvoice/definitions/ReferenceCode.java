@@ -2,6 +2,9 @@ package th.ac.kmitl.soa.group9.taxinvoice.definitions;
 
 import lombok.Getter;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Getter
 public enum ReferenceCode {
 
@@ -25,4 +28,15 @@ public enum ReferenceCode {
     private String code;
     private String descriptionTh;
     private String descriptionEn;
+
+    public static Map<String, ReferenceCode> mapper = new HashMap<>();
+    static {
+        for (ReferenceCode referenceCode : ReferenceCode.values()) {
+            mapper.put(referenceCode.getCode(), referenceCode);
+        }
+    }
+
+    public static ReferenceCode parse(String code) {
+        return mapper.get(code);
+    }
 }
