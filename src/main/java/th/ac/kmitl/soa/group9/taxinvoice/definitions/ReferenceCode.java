@@ -16,13 +16,13 @@ public enum ReferenceCode {
     CREDIT_NOTE_NUMBER("CD", "หมายเลขใบลดหนี้", "Credit Note Number"),
     MUTUAL_REFERENCE_NUMBER("ZZZ", "เอกสารอื่น ๆ", "Mutually defined reference number");
 
-    ReferenceCode(String refCode, String descriptionTh, String descriptionEn) {
-        this.refCode = refCode;
+    ReferenceCode(String code, String descriptionTh, String descriptionEn) {
+        this.code = code;
         this.descriptionTh = descriptionTh;
         this.descriptionEn = descriptionEn;
     }
 
-    private String refCode;
+    private String code;
     private String descriptionTh;
     private String descriptionEn;
 }

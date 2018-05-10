@@ -18,14 +18,14 @@ class ReferenceCodeTest {
 
     @Test
     public void shouldGetCorrectCode() {
-        assertEquals(ReferenceCode.INVOICE_NUMBER.getRefCode(), INVOICE_NUMBER_CODE);
-        assertEquals(ReferenceCode.DOCUMENT_REFERENCE_NUMBER.getRefCode(), DOCUMENT_REFERENCE_NUMBER_CODE);
-        assertEquals(ReferenceCode.SERIAL_NUMBER.getRefCode(), SERIAL_NUMBER_CODE);
-        assertEquals(ReferenceCode.ORDER_NUMBER.getRefCode(), ORDER_NUMBER_CODE);
-        assertEquals(ReferenceCode.ITEM_NUMBER.getRefCode(), ITEM_NUMBER_CODE);
-        assertEquals(ReferenceCode.PREVIOUS_TAX_INVOICE_NUMBER.getRefCode(), PREVIOUS_TAX_INVOICE_NUMBER_CODE);
-        assertEquals(ReferenceCode.DEBIT_NOTE_NUMBER.getRefCode(), DEBIT_NOTE_NUMBER_CODE);
-        assertEquals(ReferenceCode.CREDIT_NOTE_NUMBER.getRefCode(), CREDIT_NOTE_NUMBER_CODE);
-        assertEquals(ReferenceCode.MUTUAL_REFERENCE_NUMBER.getRefCode(), MUTUAL_REFERENCE_NUMBER_CODE);
+        assertEquals(ReferenceCode.INVOICE_NUMBER.getCode(), INVOICE_NUMBER_CODE);
+        assertEquals(ReferenceCode.DOCUMENT_REFERENCE_NUMBER.getCode(), DOCUMENT_REFERENCE_NUMBER_CODE);
+        assertEquals(ReferenceCode.SERIAL_NUMBER.getCode(), SERIAL_NUMBER_CODE);
+        assertEquals(ReferenceCode.ORDER_NUMBER.getCode(), ORDER_NUMBER_CODE);
+        assertEquals(ReferenceCode.ITEM_NUMBER.getCode(), ITEM_NUMBER_CODE);
+        assertEquals(ReferenceCode.PREVIOUS_TAX_INVOICE_NUMBER.getCode(), PREVIOUS_TAX_INVOICE_NUMBER_CODE);
+        assertEquals(ReferenceCode.DEBIT_NOTE_NUMBER.getCode(), DEBIT_NOTE_NUMBER_CODE);
+        assertEquals(ReferenceCode.CREDIT_NOTE_NUMBER.getCode(), CREDIT_NOTE_NUMBER_CODE);
+        assertEquals(ReferenceCode.MUTUAL_REFERENCE_NUMBER.getCode(), MUTUAL_REFERENCE_NUMBER_CODE);
     }
 }
