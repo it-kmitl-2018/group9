@@ -1,4 +1,4 @@
-package th.ac.kmitl.soa.group9.taxinvoice.definitions;
+package th.ac.kmitl.soa.group9.taxinvoice.definitions.xml;
 
 import lombok.Getter;
 
