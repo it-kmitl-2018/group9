@@ -34,4 +34,5 @@ dependencies {
 	testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 	compile("org.projectlombok:lombok:1.16.20")
 	compile("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.9.5")
+	compile("com.google.truth:truth:0.40")
 }
