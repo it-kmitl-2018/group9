@@ -1,5 +1,11 @@
 package th.ac.kmitl.soa.group9.taxinvoice.definitions;
 
+import lombok.Getter;
+
+import java.util.HashMap;
+import java.util.Map;
+
+@Getter
 public enum DocumentCode {
 
     DEBIT_NOTE("80", "ใบเพิ่มหนี้ (Debit Note)"),
@@ -22,11 +28,14 @@ public enum DocumentCode {
         this.description = description;
     }
 
-    public String getCode() {
-        return code;
+    public static Map<String, DocumentCode> mapper = new HashMap<>();
+    static {
+        for (DocumentCode documentCode : DocumentCode.values()) {
+            mapper.put(documentCode.getCode(), documentCode);
+        }
     }
 
-    public String getDescription() {
-        return description;
+    public static DocumentCode parse(String code) {
+        return mapper.get(code);
     }
 }
