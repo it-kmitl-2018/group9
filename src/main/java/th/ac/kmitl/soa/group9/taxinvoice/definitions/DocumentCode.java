@@ -1,6 +1,12 @@
 package th.ac.kmitl.soa.group9.taxinvoice.definitions;
 
-public enum TypeCode {
+import lombok.Getter;
+
+import java.util.HashMap;
+import java.util.Map;
+
+@Getter
+public enum DocumentCode {
 
     DEBIT_NOTE("80", "ใบเพิ่มหนี้ (Debit Note)"),
     CREDIT_NOTE("81", "ใบลดหนี้ (Credit Note)"),
@@ -14,19 +20,22 @@ public enum TypeCode {
     RECEIPT_AND_ABBREVIATED_TAX_INVOICE("T06", "ใบเสร็จรับเงิน/ใบกํากับภําษีอย่างย่อ (Receipt/Abbreviated Tax Invoice)"),
     CANCELLATION_NOTE("T07", "ใบแจ้งยกเลิก (Cancellation Note)");
 
-    private String typeCode;
+    private String code;
     private String description;
 
-    TypeCode(String typeCode, String description) {
-        this.typeCode = typeCode;
+    DocumentCode(String code, String description) {
+        this.code = code;
         this.description = description;
     }
 
-    public String getTypeCode() {
-        return typeCode;
+    public static Map<String, DocumentCode> mapper = new HashMap<>();
+    static {
+        for (DocumentCode documentCode : DocumentCode.values()) {
+            mapper.put(documentCode.getCode(), documentCode);
+        }
     }
 
-    public String getDescription() {
-        return description;
+    public static DocumentCode parse(String code) {
+        return mapper.get(code);
     }
 }

@@ -13,7 +13,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import th.ac.kmitl.soa.group9.taxinvoice.definitions.TypeCode;
+import th.ac.kmitl.soa.group9.taxinvoice.definitions.DocumentCode;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(TaxInvoiceController.class)
@@ -33,8 +33,8 @@ public class TaxInvoiceControllerTest {
     public void createTaxInvoice() throws Exception {
         this.mMockMvc.perform(post("/taxinvoice/create")
                 .param("id", "RDTIV0575526000058001")
-                .param("name", TypeCode.TAX_INVOICE.getDescription())
-                .param("typeCode", TypeCode.TAX_INVOICE.getTypeCode())
+                .param("name", DocumentCode.TAX_INVOICE.getDescription())
+                .param("typeCode", DocumentCode.TAX_INVOICE.getCode())
                 .param("purpose", "คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง")
                 .param("purposeCode", "DCNS03")
                 .param("globalId", "2.16.764.1.1.2.1.X.X.X"))
