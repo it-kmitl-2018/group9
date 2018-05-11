@@ -1,0 +1,42 @@
+package th.ac.kmitl.soa.group9.taxinvoice.definitions;
+
+import lombok.Getter;
+
+import java.util.HashMap;
+import java.util.Map;
+
+@Getter
+public enum ReferenceCode {
+
+    INVOICE_NUMBER("IV", "เลขใบแจ้งหนี้", "Reference number to identify an invoice"),
+    DOCUMENT_REFERENCE_NUMBER("LC", "เลขอ้างอิงระบุเอกสาร", "Reference number identifying the letter of credit document"),
+    SERIAL_NUMBER("LS", "เลขบาร์โค้ด", "Bar coded label serial number"),
+    ORDER_NUMBER("ON", "เลขที่สั่งซื้อออกโดยผู้ซื้อ", "Order document identifier, buyer assigned"),
+    ITEM_NUMBER("SE", "เลขระบุสินค้า",
+            "Identification number of an item which distinguishes this specific item out of an number of identical items"),
+    PREVIOUS_TAX_INVOICE_NUMBER("ALT", "เลขใบกำกับภาษีใบเดิม", "Previous tax control number"),
+    DEBIT_NOTE_NUMBER("DL", "หมายเลขใบเพิ่มหนี้", "Debit Note Number"),
+    CREDIT_NOTE_NUMBER("CD", "หมายเลขใบลดหนี้", "Credit Note Number"),
+    MUTUAL_REFERENCE_NUMBER("ZZZ", "เอกสารอื่น ๆ", "Mutually defined reference number");
+
+    ReferenceCode(String code, String descriptionTh, String descriptionEn) {
+        this.code = code;
+        this.descriptionTh = descriptionTh;
+        this.descriptionEn = descriptionEn;
+    }
+
+    private String code;
+    private String descriptionTh;
+    private String descriptionEn;
+
+    public static Map<String, ReferenceCode> mapper = new HashMap<>();
+    static {
+        for (ReferenceCode referenceCode : ReferenceCode.values()) {
+            mapper.put(referenceCode.getCode(), referenceCode);
+        }
+    }
+
+    public static ReferenceCode parse(String code) {
+        return mapper.get(code);
+    }
+}
