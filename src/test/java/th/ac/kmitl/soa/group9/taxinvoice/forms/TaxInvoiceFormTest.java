@@ -1,7 +1,7 @@
 package th.ac.kmitl.soa.group9.taxinvoice.forms;
 
 import org.junit.jupiter.api.Test;
-import th.ac.kmitl.soa.group9.taxinvoice.definitions.TypeCode;
+import th.ac.kmitl.soa.group9.taxinvoice.definitions.DocumentCode;
 
 import java.sql.Timestamp;
 
@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TaxInvoiceFormTest {
 
     private String id = "RDTIV0575526000058001";
-    private String name = TypeCode.TAX_INVOICE.getDescription();
-    private String typeCode = TypeCode.TAX_INVOICE.getTypeCode();
+    private String name = DocumentCode.TAX_INVOICE.getDescription();
+    private String typeCode = DocumentCode.TAX_INVOICE.getCode();
     private Timestamp issueDateTime = new Timestamp(System.currentTimeMillis());
     private String purpose = "คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง";
     private String purposeCode = "DCNS03";
