@@ -41,6 +41,12 @@ public enum AllowanceChargeCode {
     }
 
     public static AllowanceChargeCode parse(int code) {
-        return mapper.get(code);
+        AllowanceChargeCode codeEnum = mapper.get(code);
+
+        if (codeEnum == null) {
+            throw new IllegalArgumentException("Parsing not existed code " + code);
+        }
+
+        return codeEnum;
     }
 }
