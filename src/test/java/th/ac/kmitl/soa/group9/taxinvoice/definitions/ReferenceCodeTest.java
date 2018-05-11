@@ -6,40 +6,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ReferenceCodeTest {
 
-    private final String INVOICE_NUMBER_CODE = "IV";
-    private final String DOCUMENT_REFERENCE_NUMBER_CODE = "LC";
-    private final String SERIAL_NUMBER_CODE = "LS";
-    private final String ORDER_NUMBER_CODE = "ON";
-    private final String ITEM_NUMBER_CODE = "SE";
-    private final String PREVIOUS_TAX_INVOICE_NUMBER_CODE = "ALT";
-    private final String DEBIT_NOTE_NUMBER_CODE = "DL";
-    private final String CREDIT_NOTE_NUMBER_CODE = "CD";
-    private final String MUTUAL_REFERENCE_NUMBER_CODE = "ZZZ";
-
-    @Test
-    public void shouldGetCorrectCode() {
-        assertEquals(ReferenceCode.INVOICE_NUMBER.getCode(), INVOICE_NUMBER_CODE);
-        assertEquals(ReferenceCode.DOCUMENT_REFERENCE_NUMBER.getCode(), DOCUMENT_REFERENCE_NUMBER_CODE);
-        assertEquals(ReferenceCode.SERIAL_NUMBER.getCode(), SERIAL_NUMBER_CODE);
-        assertEquals(ReferenceCode.ORDER_NUMBER.getCode(), ORDER_NUMBER_CODE);
-        assertEquals(ReferenceCode.ITEM_NUMBER.getCode(), ITEM_NUMBER_CODE);
-        assertEquals(ReferenceCode.PREVIOUS_TAX_INVOICE_NUMBER.getCode(), PREVIOUS_TAX_INVOICE_NUMBER_CODE);
-        assertEquals(ReferenceCode.DEBIT_NOTE_NUMBER.getCode(), DEBIT_NOTE_NUMBER_CODE);
-        assertEquals(ReferenceCode.CREDIT_NOTE_NUMBER.getCode(), CREDIT_NOTE_NUMBER_CODE);
-        assertEquals(ReferenceCode.MUTUAL_REFERENCE_NUMBER.getCode(), MUTUAL_REFERENCE_NUMBER_CODE);
-    }
-
     @Test
     public void shouldGetCorrectReferenceCode() {
-        assertEquals(ReferenceCode.INVOICE_NUMBER, ReferenceCode.parse(INVOICE_NUMBER_CODE));
-        assertEquals(ReferenceCode.DOCUMENT_REFERENCE_NUMBER, ReferenceCode.parse(DOCUMENT_REFERENCE_NUMBER_CODE));
-        assertEquals(ReferenceCode.SERIAL_NUMBER, ReferenceCode.parse(SERIAL_NUMBER_CODE));
-        assertEquals(ReferenceCode.ORDER_NUMBER, ReferenceCode.parse(ORDER_NUMBER_CODE));
-        assertEquals(ReferenceCode.ITEM_NUMBER, ReferenceCode.parse(ITEM_NUMBER_CODE));
-        assertEquals(ReferenceCode.PREVIOUS_TAX_INVOICE_NUMBER, ReferenceCode.parse(PREVIOUS_TAX_INVOICE_NUMBER_CODE));
-        assertEquals(ReferenceCode.DEBIT_NOTE_NUMBER, ReferenceCode.parse(DEBIT_NOTE_NUMBER_CODE));
-        assertEquals(ReferenceCode.CREDIT_NOTE_NUMBER, ReferenceCode.parse(CREDIT_NOTE_NUMBER_CODE));
-        assertEquals(ReferenceCode.MUTUAL_REFERENCE_NUMBER, ReferenceCode.parse(MUTUAL_REFERENCE_NUMBER_CODE));
+        assertEquals(ReferenceCode.INVOICE_NUMBER, ReferenceCode.parse("IV"));
+        assertEquals(ReferenceCode.DOCUMENT_REFERENCE_NUMBER, ReferenceCode.parse("LC"));
+        assertEquals(ReferenceCode.SERIAL_NUMBER, ReferenceCode.parse("LS"));
+        assertEquals(ReferenceCode.ORDER_NUMBER, ReferenceCode.parse("ON"));
+        assertEquals(ReferenceCode.ITEM_NUMBER, ReferenceCode.parse("SE"));
+        assertEquals(ReferenceCode.PREVIOUS_TAX_INVOICE_NUMBER, ReferenceCode.parse("ALT"));
+        assertEquals(ReferenceCode.DEBIT_NOTE_NUMBER, ReferenceCode.parse("DL"));
+        assertEquals(ReferenceCode.CREDIT_NOTE_NUMBER, ReferenceCode.parse("CD"));
+        assertEquals(ReferenceCode.MUTUAL_REFERENCE_NUMBER, ReferenceCode.parse("ZZZ"));
     }
 
     @Test
