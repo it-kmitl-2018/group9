@@ -36,6 +36,12 @@ public enum DocumentCode {
     }
 
     public static DocumentCode parse(String code) {
+        DocumentCode codeEnum = mapper.get(code);
+
+        if (codeEnum == null) {
+            throw new IllegalArgumentException("Parsing not existed code " + code);
+        }
+
         return mapper.get(code);
     }
 }

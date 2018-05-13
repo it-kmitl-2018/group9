@@ -2,6 +2,7 @@ package th.ac.kmitl.soa.group9.taxinvoice.definitions;
 
 import org.junit.jupiter.api.Test;
 
+import static com.google.common.truth.Truth.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DocumentCodeTest {
@@ -22,7 +23,9 @@ public class DocumentCodeTest {
     }
 
     @Test
-    public void shouldGetNullWhenParsingNotExistedCode() {
-        assertNull(DocumentCode.parse("123"));
+    public void shouldThrowIllegalArgumentExceptionWhenParsingNotExistedCode() {
+        IllegalArgumentException e = assertThrows(
+                IllegalArgumentException.class, () -> DocumentCode.parse("123"));
+        assertThat(e).hasMessageThat().contains("Parsing not existed code");
     }
 }
