@@ -1,5 +1,6 @@
-package th.ac.kmitl.soa.group9.taxinvoice.definitions;
+package th.ac.kmitl.soa.group9.taxinvoice.definitions.xml;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static com.google.common.truth.Truth.assertThat;
@@ -9,7 +10,7 @@ public class DocumentCodeTest {
 
     @Test
     public void shouldGetCorrectDocumentCode() {
-        assertEquals(DocumentCode.DEBIT_NOTE, DocumentCode.parse("80"));
+        Assertions.assertEquals(DocumentCode.DEBIT_NOTE, DocumentCode.parse("80"));
         assertEquals(DocumentCode.CREDIT_NOTE, DocumentCode.parse("81"));
         assertEquals(DocumentCode.INVOICE, DocumentCode.parse("380"));
         assertEquals(DocumentCode.TAX_INVOICE, DocumentCode.parse("388"));

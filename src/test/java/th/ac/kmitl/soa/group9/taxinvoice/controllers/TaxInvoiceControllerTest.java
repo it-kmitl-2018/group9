@@ -13,7 +13,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import th.ac.kmitl.soa.group9.taxinvoice.definitions.DocumentCode;
+import th.ac.kmitl.soa.group9.taxinvoice.definitions.xml.DocumentCode;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(TaxInvoiceController.class)

@@ -1,5 +1,6 @@
-package th.ac.kmitl.soa.group9.taxinvoice.definitions;
+package th.ac.kmitl.soa.group9.taxinvoice.definitions.xml;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static com.google.common.truth.Truth.assertThat;
@@ -9,7 +10,7 @@ class ReferenceCodeTest {
 
     @Test
     public void shouldGetCorrectReferenceCode() {
-        assertEquals(ReferenceCode.INVOICE_NUMBER, ReferenceCode.parse("IV"));
+        Assertions.assertEquals(ReferenceCode.INVOICE_NUMBER, ReferenceCode.parse("IV"));
         assertEquals(ReferenceCode.DOCUMENT_REFERENCE_NUMBER, ReferenceCode.parse("LC"));
         assertEquals(ReferenceCode.SERIAL_NUMBER, ReferenceCode.parse("LS"));
         assertEquals(ReferenceCode.ORDER_NUMBER, ReferenceCode.parse("ON"));

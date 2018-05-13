@@ -1,7 +1,7 @@
 package th.ac.kmitl.soa.group9.taxinvoice.interpreterwrappers;
 
 import org.junit.Test;
-import th.ac.kmitl.soa.group9.taxinvoice.definitions.DocumentCode;
+import th.ac.kmitl.soa.group9.taxinvoice.definitions.xml.DocumentCode;
 import th.ac.kmitl.soa.group9.taxinvoice.forms.TaxInvoiceForm;
 
 import java.sql.Timestamp;
