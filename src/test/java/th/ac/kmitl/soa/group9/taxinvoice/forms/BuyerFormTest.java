@@ -12,17 +12,7 @@ public class BuyerFormTest {
     private String taxRegistrationId = "1104599001271";
     private String branchId = "00000";
     private String email = "aurasya.s@gmail.com";
-    private String building = "ไอดิโอคิว";
-    private String buildingNumber = "799/89";
-    private String soi = "จุฬาซอย 10";
-    private String village = "จุฬาลงกรณ์";
-    private String moo = "1";
-    private String streetName = "พระราม 4";
-    private String citySub = "100402";
-    private String city = "1004";
-    private String countrySub = "10";
-    private String country = "TH";
-    private String postCode = "10330";
+    private AddressForm addressForm = AddressForm.builder().build();
 
     @Test
     public void shouldGetAllInfo() {
@@ -33,17 +23,7 @@ public class BuyerFormTest {
                 .taxRegistrationId(this.taxRegistrationId)
                 .branchId(this.branchId)
                 .email(this.email)
-                .building(this.building)
-                .buildingNumber(this.buildingNumber)
-                .soi(this.soi)
-                .village(this.village)
-                .moo(this.moo)
-                .streetName(this.streetName)
-                .citySub(this.citySub)
-                .city(this.city)
-                .countrySub(this.countrySub)
-                .country(this.country)
-                .postCode(this.postCode)
+                .addressForm(this.addressForm)
                 .build();
 
         assertEquals(this.id, buyerForm.getId());
@@ -52,16 +32,6 @@ public class BuyerFormTest {
         assertEquals(this.taxRegistrationId, buyerForm.getTaxRegistrationId());
         assertEquals(this.branchId, buyerForm.getBranchId());
         assertEquals(this.email, buyerForm.getEmail());
-        assertEquals(this.building, buyerForm.getBuilding());
-        assertEquals(this.buildingNumber, buyerForm.getBuildingNumber());
-        assertEquals(this.soi, buyerForm.getSoi());
-        assertEquals(this.village, buyerForm.getVillage());
-        assertEquals(this.moo, buyerForm.getMoo());
-        assertEquals(this.streetName, buyerForm.getStreetName());
-        assertEquals(this.citySub, buyerForm.getCitySub());
-        assertEquals(this.city, buyerForm.getCity());
-        assertEquals(this.countrySub, buyerForm.getCountrySub());
-        assertEquals(this.country, buyerForm.getCountry());
-        assertEquals(this.postCode, buyerForm.getPostCode());
+        assertEquals(this.addressForm, buyerForm.getAddressForm());
     }
 }
