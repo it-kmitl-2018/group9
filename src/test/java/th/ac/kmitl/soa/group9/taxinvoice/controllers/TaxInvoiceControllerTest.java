@@ -32,12 +32,23 @@ public class TaxInvoiceControllerTest {
     @Test
     public void createTaxInvoice() throws Exception {
         this.mMockMvc.perform(post("/taxinvoice/create")
-                .param("id", "RDTIV0575526000058001")
-                .param("name", DocumentCode.TAX_INVOICE.getDescription())
-                .param("typeCode", DocumentCode.TAX_INVOICE.getCode())
-                .param("purpose", "คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง")
-                .param("purposeCode", "DCNS03")
-                .param("globalId", "2.16.764.1.1.2.1.X.X.X"))
+                .param("sellerForm.id", "ABCDEFGHIJKLMNOPQRST123456789012345")
+                .param("sellerForm.globalId", "123456")
+                .param("sellerForm.name", "บริษัท ร่วมสมัยการค้าไทย จำกัด")
+                .param("sellerForm.taxRegistrationId", "0575526009099")
+                .param("sellerForm.branchId", "00000")
+                .param("sellerForm.email", "tax@rstmarket.co.th")
+                .param("sellerAddress.building", "ื้อจือเหลียง")
+                .param("sellerAddress.buildingNumber", "968/1")
+                .param("sellerAddress.soi", "ศาลาแดง 1")
+                .param("sellerAddress.village", "ศาลาแดงวิลล่า")
+                .param("sellerAddress.moo", "3")
+                .param("sellerAddress.streetName", "าีลม")
+                .param("sellerAddress.citySub", "101701")
+                .param("sellerAddress.city", "1017")
+                .param("sellerAddress.countrySub", "10")
+                .param("sellerAddress.country", "TH")
+                .param("sellerAddress.postCode", "10310"))
                 .andExpect(redirectedUrl("/taxinvoice/preview"));
     }
 }

@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import th.ac.kmitl.soa.group9.taxinvoice.definitions.PageRouting;
 import th.ac.kmitl.soa.group9.taxinvoice.definitions.SessionlAttribute;
 import th.ac.kmitl.soa.group9.taxinvoice.facades.TaxinvoiceFacade;
+import th.ac.kmitl.soa.group9.taxinvoice.forms.AddressForm;
+import th.ac.kmitl.soa.group9.taxinvoice.forms.SellerForm;
 import th.ac.kmitl.soa.group9.taxinvoice.forms.TaxInvoiceForm;
 
 
@@ -18,19 +20,19 @@ public class TaxInvoiceController {
 
     @RequestMapping(value = "/taxinvoice/input_form")
     public String taxInvoiceForm(Model model) {
-        TaxInvoiceForm taxInvoiceForm = new TaxInvoiceForm();
+        SellerForm sellerForm = SellerForm.builder().build();
         TaxinvoiceFacade.getTaxinvoiceFacade().setAttributesToModel(model,
-                taxInvoiceForm,
-                SessionlAttribute.TAXINVOICEFORM.getAttributeName());
+                sellerForm,
+                SessionlAttribute.SELLERFORM.getAttributeName());
         return PageRouting.TAXINVOICEFORM.getKeyPage();
     }
 
     @PostMapping(value = "/taxinvoice/create")
-    public String create(@ModelAttribute TaxInvoiceForm taxInvoiceForm,
+    public String create(@ModelAttribute SellerForm sellerForm,
                          HttpSession session) {
         TaxinvoiceFacade.getTaxinvoiceFacade().setAttributesToSession(session,
-                taxInvoiceForm,
-                SessionlAttribute.TAXINVOICEFORM.getAttributeName());
+                sellerForm,
+                SessionlAttribute.SELLERFORM.getAttributeName());
         return "redirect:/taxinvoice/preview";
     }
 }

@@ -8,48 +8,77 @@
 <body>
 <h1>Home</h1>
 <h3>Tax Invoice</h3>
-<form method="post" th:action="@{/taxinvoice/create}" th:object="${taxInvoiceForm}">
+<h4>Seller</h4>
+<form method="post" th:action="@{/taxinvoice/create}">
     <div>
         <label>ID</label>
-
-        <input type="text" th:field="*{id}">
+        <input type="text" th:field="${sellerForm.id}">
+    </div>
+    <div>
+        <label>Global ID</label>
+        <input type="text" th:field="${sellerForm.globalId}">
     </div>
     <div>
         <label>Name</label>
-        <input type="text" th:field="*{name}">
+        <input type="text" th:field="${sellerForm.name}">
     </div>
     <div>
-        <label>Type code</label>
-        <input type="text" th:field="*{typeCode}">
+        <label>Tax Registration ID</label>
+        <input type="text" th:field="${sellerForm.taxRegistrationId}">
     </div>
     <div>
-        <label>Issue date time</label>
-        <input type="text">
+        <label>Branch ID</label>
+        <input type="text" th:field="${sellerForm.branchId}">
     </div>
     <div>
-        <label>Purpose</label>
-        <input type="text" th:field="*{purpose}">
+        <label>Email</label>
+        <input type="text" th:field="${sellerForm.email}">
     </div>
-    <div>
-        <label>Purpose code</label>
-        <input type="text" th:field="*{purposeCode}">
-    </div>
-    <div>
-        <label>Global id</label>
-        <input type="text" th:field="*{globalId}">
-    </div>
-    <div>
-        <label>Creation date time</label>
-        <input type="text">
-    </div>
-    <h3>Included Note</h3>
-    <div>
-        <label>Subject</label>
-        <input type="text">
-    </div>
-    <div>
-        <label>Content</label>
-        <input type="text">
+    <div th:each="sellerAddress, stat : ${sellerForm.addressForm}">
+        <div>
+            <label>Building Name</label>
+            <input type="text" th:field="${sellerAddress.building}">
+        </div>
+        <div>
+            <label>Building No.</label>
+            <input type="text" th:field="*{sellerAddress.buildingNumber}">
+        </div>
+        <div>
+            <label>Alley</label>
+            <input type="text" th:field="*{sellerAddress.soi}">
+        </div>
+        <div>
+            <label>Village</label>
+            <input type="text" th:field="*{sellerAddress.village}">
+        </div>
+        <div>
+            <label>Village No.</label>
+            <input type="text" th:field="*{sellerAddress.moo}">
+        </div>
+        <div>
+            <label>Street name</label>
+            <input type="text" th:field="*{sellerAddress.streetName}">
+        </div>
+        <div>
+            <label>Sub-district</label>
+            <input type="text" th:field="*{sellerAddress.citySub}">
+        </div>
+        <div>
+            <label>District</label>
+            <input type="text" th:field="*{sellerAddress.city}">
+        </div>
+        <div>
+            <label>Province ID</label>
+            <input type="text" th:field="*{sellerAddress.countrySub}">
+        </div>
+        <div>
+            <label>Country ID</label>
+            <input type="text" th:field="*{sellerAddress.country}">
+        </div>
+        <div>
+            <label>Postal Code</label>
+            <input type="text" th:field="*{sellerAddress.postCode}">
+        </div>
     </div>
     <div>
         <input type="submit" value="Create" name="create"/>
