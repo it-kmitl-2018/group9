@@ -1,7 +1,7 @@
 package th.ac.kmitl.soa.group9.taxinvoice.models.xml;
 
 import org.junit.Test;
-import th.ac.kmitl.soa.group9.taxinvoice.definitions.DocumentCode;
+import th.ac.kmitl.soa.group9.taxinvoice.definitions.xml.DocumentCode;
 
 import java.sql.Timestamp;
 

@@ -1,14 +1,16 @@
-package th.ac.kmitl.soa.group9.taxinvoice.definitions;
+package th.ac.kmitl.soa.group9.taxinvoice.definitions.xml;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static com.google.common.truth.Truth.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ReferenceCodeTest {
 
     @Test
     public void shouldGetCorrectReferenceCode() {
-        assertEquals(ReferenceCode.INVOICE_NUMBER, ReferenceCode.parse("IV"));
+        Assertions.assertEquals(ReferenceCode.INVOICE_NUMBER, ReferenceCode.parse("IV"));
         assertEquals(ReferenceCode.DOCUMENT_REFERENCE_NUMBER, ReferenceCode.parse("LC"));
         assertEquals(ReferenceCode.SERIAL_NUMBER, ReferenceCode.parse("LS"));
         assertEquals(ReferenceCode.ORDER_NUMBER, ReferenceCode.parse("ON"));
@@ -20,7 +22,9 @@ class ReferenceCodeTest {
     }
 
     @Test
-    public void shouldGetNullWhenParsingNotExistedCode() {
-        assertNull(ReferenceCode.parse("123"));
+    public void shouldThrowIllegalArgumentExceptionWhenParsingNotExistedCode() {
+        IllegalArgumentException e = assertThrows(
+                IllegalArgumentException.class, () -> ReferenceCode.parse("123"));
+        assertThat(e).hasMessageThat().contains("Parsing not existed code");
     }
 }

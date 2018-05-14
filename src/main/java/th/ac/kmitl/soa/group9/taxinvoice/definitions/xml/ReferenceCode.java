@@ -1,4 +1,4 @@
-package th.ac.kmitl.soa.group9.taxinvoice.definitions;
+package th.ac.kmitl.soa.group9.taxinvoice.definitions.xml;
 
 import lombok.Getter;
 
@@ -37,6 +37,12 @@ public enum ReferenceCode {
     }
 
     public static ReferenceCode parse(String code) {
+        ReferenceCode codeEnum = mapper.get(code);
+
+        if (codeEnum == null) {
+            throw new IllegalArgumentException("Parsing not existed code " + code);
+        }
+
         return mapper.get(code);
     }
 }
