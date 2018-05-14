@@ -15,7 +15,6 @@ public class DeliveryWrapperTest {
     private String phone = "02-999-1999";
     private String contactName = "กรกต มรกตพักต์";
     private String departmentName = "ฝ่ายจัดซื้อ";
-    private AddressForm addressForm = AddressForm.builder().build();
 
     @Test
     public void shouldGetAllInfo() {
