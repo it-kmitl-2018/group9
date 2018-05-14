@@ -14,17 +14,6 @@ public class SellerWrapperTest {
     private String taxRegistrationId = "0575526009099";
     private String branchId = "00000";
     private String email = "tax@rstmarket.co.th";
-    private String building = "อื้อจือเหลียง";
-    private String buildingNumber = "968/1";
-    private String soi = "ศาลาแดง 1";
-    private String village = "ศาลาแดงวิลล่า";
-    private String moo = "3";
-    private String streetName = "สีลม";
-    private String citySub = "101701";
-    private String city = "1017";
-    private String countrySub = "10";
-    private String country = "TH";
-    private String postCode = "10310";
 
     @Test
     public void shouldGetAllInfo() {
@@ -36,17 +25,6 @@ public class SellerWrapperTest {
                 .branchId(this.branchId)
                 .email(this.email)
                 .addressForm(AddressForm.builder()
-                        .building(this.building)
-                        .buildingNumber(this.buildingNumber)
-                        .soi(this.soi)
-                        .village(this.village)
-                        .moo(this.moo)
-                        .streetName(this.streetName)
-                        .citySub(this.citySub)
-                        .city(this.city)
-                        .countrySub(this.countrySub)
-                        .country(this.country)
-                        .postCode(this.postCode)
                         .build())
                 .build();
 
@@ -127,6 +105,5 @@ public class SellerWrapperTest {
                 .getPostCode(), seller
                 .getAddress()
                 .getPostCode());
-
     }
 }
